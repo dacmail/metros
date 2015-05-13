@@ -1,0 +1,26 @@
+{
+  "name": "metros",
+  "version": "1.0.0",
+  "authors": [
+    "Daniel Aguilar <hola@soydac.com>"
+  ],
+  "description": "WordPress theme for Metroscopia.org",
+  "main": "style.css",
+  "keywords": [
+    "wordpress",
+    "theme",
+    "metroscopia"
+  ],
+  "license": "MIT",
+  "homepage": "metroscopia.org",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}

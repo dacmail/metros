@@ -1,0 +1,21 @@
+{
+  "name": "metros",
+  "version": "1.0.0",
+  "description": "WordPress Theme for Metroscopia.org",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dacmail/metros.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "metroscopia"
+  ],
+  "author": "Daniel Aguilar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dacmail/metros/issues"
+  },
+  "homepage": "https://github.com/dacmail/metros#readme"
+}
