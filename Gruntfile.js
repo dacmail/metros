@@ -21,12 +21,24 @@ module.exports = function(grunt) {
       bootstrapcss: {
         src: ['bower_components/bootstrap/dist/css/bootstrap.min.css'],
         dest: 'css/bootstrap.min.css'
+      },
+      fontawesome: {
+        src: ['bower_components/font-awesome/css/font-awesome.min.css'],
+        dest: 'css/font-awesome.min.css'
       }
     },
     copy: {
       fonts: {
           expand: true,
           cwd: 'bower_components/bootstrap/dist/fonts/',
+          src: '*',
+          dest: 'fonts/',
+          flatten: true,
+          filter: 'isFile',
+      },
+      fontawesome: {
+          expand: true,
+          cwd: 'bower_components/font-awesome/fonts/',
           src: '*',
           dest: 'fonts/',
           flatten: true,
@@ -42,6 +54,6 @@ module.exports = function(grunt) {
 
 
   // Default task.
-  grunt.registerTask('assets', ['concat:bootstrapjs', 'concat:bootstrapcss', 'copy:fonts']);
+  grunt.registerTask('assets', ['concat', 'copy']);
 
 };

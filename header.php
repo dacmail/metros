@@ -8,6 +8,21 @@
 </head>
 <body <?php body_class(); ?>>
 	<header id="header">
-		<a class="logo" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" /></a>
-		<?php wp_nav_menu(array('container' => 'nav', 'container_id' => 'main-menu', 'container_class' => '', 'theme_location' => 'main')); ?>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-5"><a class="logo" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.jpg" alt="<?php bloginfo('name'); ?>" /></a></div>
+				<div class="col-sm-7">
+					<?php wp_nav_menu(array('container' => 'nav', 'container_id' => 'main-menu', 'menu_class' => 'nav navbar-nav navbar-right', 'theme_location' => 'main')); ?>
+				</div>
+				<div class="col-sm-12">
+					<?php wp_nav_menu(array('container' => 'nav', 'container_id' => 'secondary-menu', 'menu_class' => 'nav navbar-nav', 'theme_location' => 'secondary')); ?>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+	    </button>
 	</header>
