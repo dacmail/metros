@@ -1,4 +1,9 @@
 <?php 
+	//Opciones generales
+	add_option('ungrynerd_encuestas_icon', 'fa fa-bar-chart', '', 'yes');
+	add_option('ungrynerd_analisis_icon', 'fa fa-search', '', 'yes');
+	add_option('ungrynerd_recursos_icon', 'fa fa-pie-chart', '', 'yes');
+
 	// Content width
 	if ( ! isset( $content_width ) ) $content_width = 970;
 
@@ -35,6 +40,6 @@
 	// Soporte para miniaturas y definición de tamaños
 	add_theme_support( 'post-thumbnails' );
 	if ( function_exists( 'add_image_size' ) ) {
-		add_image_size( 'featured', 800, 400, true );
+		add_image_size( 'featured-secondary', 800, 800, false );
 	}
 ?>

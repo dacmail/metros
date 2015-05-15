@@ -86,7 +86,7 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 		static function html( $meta, $field )
 		{
 			$options = $field['options'];
-			$terms   = get_terms( $options['taxonomy'], $options['args'] );
+			$terms   = get_terms( $options['taxonomies'], $options['args'] );
 
 			$field['options'] = self::get_options( $terms );
 			$field['display_type'] = $options['type'];

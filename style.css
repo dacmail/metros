@@ -20,6 +20,9 @@ body, input, textarea {
 a {
     text-decoration:none;
     color:;
+    -webkit-transition: opacity 0.3s ease-in;
+    -o-transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in;
 }
 a:hover {
     text-decoration:underline;
@@ -27,7 +30,9 @@ a:hover {
 a img, :link img, :visited img {border: 0;}
 img {max-width: 100%; height: auto;}
 body {
-    font-family:;
+    font-family:"Roboto";
+    color:#7F7F7F;
+    font-size: 15px;
 }
 #header {
     padding:10px 0px 0px 0px;
@@ -109,7 +114,64 @@ body {
                 color:#000; 
                 background-color: transparent;
             }
-#container {}
+#container {
+    padding-top:40px;
+    padding-bottom: 40px;
+}
+    /* Articles commons */
+    .post-title {
+        color:#191919;
+        font-family: "Roboto Condensed";
+        font-weight: bold;
+    }
+        .post-title a {color:#191919;}
+    .category-metas {}
+        .category-metas .type {
+            background-color: #191919;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            color:#fff;
+            font-size: 19px;
+            text-align: center;
+            display: inline-block;
+        }
+        .category-metas .cat {
+            background-color: #DFBB4A;
+            color:#fff;
+            font-size: 19px;
+            font-family: "Roboto Condensed";
+            font-weight: 300;
+            display: inline-block;
+            line-height: 32px;
+            padding:0px 10px;
+        }
+            .category-metas .cat:hover {
+                text-decoration: none;
+                opacity: 0.8;
+            }
+    .author-meta {
+        color:#191919;
+        font-family: "Roboto Condensed";
+        font-size: 15px;
+        margin-bottom:10px;
+    }
+        .author-meta a {color:#191919;}
+        .author-meta a:before {
+            content: ' ';
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            background-color: #191919;
+            margin-right: 5px;
+            margin-top:-2px;
+            top: 1px;
+            position: relative;
+        }
+    /* Secondary Featured */
+    .featured-secondary {}
+        .featured-secondary .image {text-align: center;}
+        .featured-secondary .post-title {font-size: 50px;}
     #content {}
     #content p {
         margin:10px 0px;
