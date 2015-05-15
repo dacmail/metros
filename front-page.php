@@ -1,7 +1,7 @@
 <?php get_header() ?>
 <div id="container" class="clearfix">
 	<section id="content" class="clearfix">
-		<?php $featured = new WP_Query(array('meta_key' => '_ungrynerd_featured', 'meta_value' => 'on', 'post_type'=>'page, post', 'posts_per_page' => -1)); ?>
+		<?php $featured = new WP_Query(array('meta_key' => '_ungrynerd_featured2', 'meta_value' => 1, 'post_type'=> array('post'), 'posts_per_page' => -1)); ?>
 		<?php while ($featured->have_posts()) : $featured->the_post(); ?>
 			<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 				<h1 class="post-title">

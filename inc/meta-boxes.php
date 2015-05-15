@@ -24,7 +24,7 @@ $meta_boxes[] = array(
 	                'desc' =>  __('¿Mostrar en el bloque destacado principal?'),
 	                'id' => $prefix . 'featured',
 	                'type' => 'checkbox',
-	            )
+	            ),
             array(
 	                'name' =>  __('Destacar en portada (secundario'),
 	                'desc' =>  __('¿Mostrar en el bloque destacado secundario?'),
