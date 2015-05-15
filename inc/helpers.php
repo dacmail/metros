@@ -47,6 +47,7 @@
 		return $return;
 	}
 
+	//Devuelve el nombre de la taxonomía dado un ID de un término
 	function &get_tax_by_term_id($term) {
 	    global $wpdb;
 	    $null = null;
