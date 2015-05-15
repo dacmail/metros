@@ -20,9 +20,15 @@ $meta_boxes[] = array(
         'show_names' => true, // Show field names on the left
         'fields'     => array(
             array(
-	                'name' =>  __('Destacar en portada'),
-	                'desc' =>  __('¿Destacar en slideshow de portada?'),
+	                'name' =>  __('Destacar en portada (principal)'),
+	                'desc' =>  __('¿Mostrar en el bloque destacado principal?'),
 	                'id' => $prefix . 'featured',
+	                'type' => 'checkbox',
+	            )
+            array(
+	                'name' =>  __('Destacar en portada (secundario'),
+	                'desc' =>  __('¿Mostrar en el bloque destacado secundario?'),
+	                'id' => $prefix . 'featured2',
 	                'type' => 'checkbox',
 	            )
         ),
