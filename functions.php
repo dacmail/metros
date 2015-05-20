@@ -5,6 +5,7 @@
 		define( 'RWMB_URL', trailingslashit( get_stylesheet_directory_uri() . '/meta-box' ) );
 		define( 'RWMB_DIR', trailingslashit( get_stylesheet_directory() . '/meta-box' ) );
 		require_once RWMB_DIR . 'meta-box.php';
+		include get_template_directory() . '/inc/widgets.php';
 		include get_template_directory() . '/inc/actions.php';
 		include get_template_directory() . '/inc/config.php';
 		include get_template_directory() . '/inc/posts.php';

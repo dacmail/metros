@@ -47,6 +47,17 @@
 		return $return;
 	}
 
+	//Muestra el slug de la primera categoría asignada
+	function ungrynerd_cat_slug($post_id) {
+		$cats = get_the_terms( $post_id,'category');
+		if ($cats) {
+			$cat = array_pop($cats);
+			if (!is_wp_error($cat))
+				return $cat->slug;
+		}
+		return '';
+	}
+
 	//Devuelve el nombre de la taxonomía dado un ID de un término
 	function &get_tax_by_term_id($term) {
 	    global $wpdb;
@@ -66,5 +77,19 @@
         }
 
 	    return $_term->taxonomy;
+	}
+
+	//Get term anchor with custom text
+	function ungrynerd_tax_anchor($term, $tax, $anchor_text='') {
+		if (is_object($term)) {
+			$_term = $term;
+			$tax = $term->taxonomy;
+		} else {
+			$_term = get_term($term, $tax);
+		}
+		if (!is_wp_error($_term)) {
+			$anchor_text = empty($anchor_text) ? $_term->name : $anchor_text;
+			return '<a href="'. get_term_link($_term->slug, $tax).'">'. $anchor_text .'</a>';
+		}
 	}
 ?>

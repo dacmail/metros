@@ -10,13 +10,15 @@
 	Tags: one-column, light
 	Text Domain: ungrynerd
 */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700|Roboto:400,100,300,700,900|Oswald:400,700,300);
 /* FIXES */
 body, input, textarea {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
 }
-/* END FIXES */
+
+/* Commons */
 a {
     text-decoration:none;
     color:;
@@ -34,6 +36,67 @@ body {
     color:#7F7F7F;
     font-size: 15px;
 }
+#container {
+    padding-top:40px;
+    padding-bottom: 40px;
+}
+#content {}
+    #content p {
+        margin:10px 0px;
+    }
+    #content .post-content ul, #content .post-content ol {
+        margin:10px;
+    }
+.sidebar-separator {
+    padding-right: 30px;
+    border-right:1px solid #E5E5E5;
+}
+.block-title {
+    font-family: "Oswald";
+    font-size: 35px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color:#191919;
+    position: relative;
+    font-weight: 700;
+    margin-bottom:35px;
+}
+    .block-title.c18-climasocial {color:#3987CD;}
+    .block-title:before {
+        left: -35px;
+        bottom: 2px;
+        height: 30px;
+        position: absolute;
+        content: "/";
+        font-size: 87px;
+        overflow: hidden;
+        font-weight: 400;
+    }
+.more a {
+    font-family: "Roboto Condensed";
+    color:#FF444B;
+    font-size: 15px;
+    line-height: 15px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+    .more a:before {
+        position: absolute;
+        left: -20px;
+        top:0px;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: translate(0, 0);
+        content: "\f054";
+}
+.dark {background: #000000;}
+    .dark .block-title, .dark .post-title, .dark .more a, .dark .post-title a {color:#fff !important;}
+/* Header */
 #header {
     padding:10px 0px 0px 0px;
     border-bottom:4px solid #E5E5E5;
@@ -114,11 +177,7 @@ body {
                 color:#000; 
                 background-color: transparent;
             }
-#container {
-    padding-top:40px;
-    padding-bottom: 40px;
-}
-    /* Articles commons */
+/* Articles commons */
     .post-title {
         color:#191919;
         font-family: "Roboto Condensed";
@@ -154,6 +213,7 @@ body {
         color:#191919;
         font-family: "Roboto Condensed";
         font-size: 15px;
+        line-height: 15px;
         margin-bottom:10px;
     }
         .author-meta a {color:#191919;}
@@ -168,22 +228,155 @@ body {
             top: 1px;
             position: relative;
         }
-    /* Secondary Featured */
-    .featured-secondary {}
+/* Home general */
+#main-home-content {margin-bottom: 40px;}
+/* Secondary Featured */
+    .featured-secondary {
+        margin-bottom: 20px;
+    }
         .featured-secondary .image {text-align: center;}
         .featured-secondary .post-title {font-size: 50px;}
-    #content {}
-    #content p {
-        margin:10px 0px;
+
+/* Home primary block */
+    .primary-home {padding-right: 0px;}
+        .primary-home .block-wrap {
+            padding-right: 30px;
+            border-right:1px solid #E5E5E5;
+        }
+        .primary-home .post {
+            padding-bottom:5px;
+            border-bottom:1px solid #E5E5E5;
+            margin-bottom:20px;
+        }
+            .primary-home .post:last-child, .primary-home .post.last {border:0px;}
+        .primary-home .image {
+            width: 132px;
+            height: 132px;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 10px;
+        }
+        .primary-home .post-title {font-size: 25px;}
+
+/* Home secondary block */
+.secondary-home {
+    padding-left: 30px;
+}
+    .secondary-home .post {
+            padding-bottom:5px;
+            border-bottom:1px solid #E5E5E5;
+            margin-bottom:20px;
+        }
+            .secondary-home .post:last-child, .secondary-home .post.last {border:0px;}
+     .secondary-home .post-title {font-size: 19px;}
+
+/* Home Multimedia */
+.multimedia-home {
+    padding:10px 0px 20px 0px;
+    margin-bottom: 20px;
+}
+/* Sidebar */
+#sidebar {
+    padding-left: 60px;
+}
+    #sidebar .widget {margin-bottom:30px;}
+
+    /* Busqueda */
+    #searchform .wrapper {
+        background: #fff;
+        position: relative;
+        margin-left: -30px;
     }
-    #content .post-content ul, #content .post-content ol {
-        margin:10px;
+    #searchform .wrapper:after {
+        position: absolute;
+        right: 10px;
+        top:12px;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: translate(0, 0);
+        content: "\f002";
+        color:#B2B2B2;
     }
-    #sidebar {}
+        #searchform .wrapper .field {
+            width: 100%;
+            background: transparent;
+            border:1px solid #E5E5E5;
+            line-height: 40px;
+            height: 40px;
+            padding:0px 8px;
+            color:#B2B2B2;
+        }
+        
+    /* Tendencias */
+    .widget_ungrynerd_list_tags .trends {
+        list-style: none;
+        padding:0px;
+        margin:0px;
+        color:#FF444B;
+        font-family: "Roboto Condensed";
+        font-size: 15px;
+    }
+        .widget_ungrynerd_list_tags .trends a {color:#FF444B;}
+        .widget_ungrynerd_list_tags .trends li {
+            position: relative;
+            margin-bottom:2px;
+        }
+        .widget_ungrynerd_list_tags .trends li:before {
+            position: absolute;
+            left: -20px;
+            top:3px;
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transform: translate(0, 0);
+            content: "\f02b";
+        }
+
+    /* Analistas */
+    #sidebar .analista {
+        border-bottom:1px solid #E5E5E5;
+        margin-bottom:20px;
+    }
+        #sidebar .analista .avatar {
+            float: left;
+            margin-right: 15px;
+            margin-left: -30px;
+        }
+        #sidebar .analista .wrap-info a {
+            float: left;
+            font-family: "Roboto Condensed";
+            font-size: 15px;
+            line-height: 17px;
+            color:#191919;
+            margin-top: 30px;
+            max-width: 70px;
+        }
+        #sidebar .analista .post-title {
+            font-size: 19px;
+            position: relative;
+        }
+        #sidebar .analista .post-title:before {
+            content: ' ';
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background-color: #191919;
+            left: -25px;
+            top: 5px;
+            position: absolute;
+        }
+        #sidebar .analista .post-title.c18-climasocial:before {background-color: #3987CD;}
+/* Footer */
 #footer {}
 
-/* =WordPress Core
--------------------------------------------------------------- */
+/* WordPress Core */
 .alignnone {
     margin: 5px 20px 20px 0;
 }
