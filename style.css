@@ -310,6 +310,40 @@ body {
         border-top:1px solid #E5E5E5;
     }
         .single .post-content .sidebar {}
+            .single .post-content .sidebar .by, .by a {
+                color:#7F7F7F;
+                font-family: "Roboto Condensed";
+                font-weight: 300;
+                font-size: 15px;
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
+                .single .post-content .sidebar .by span {
+                    font-family: "Roboto Condensed";
+                    font-size: 23px;
+                    font-weight: bold;
+                    color:#191919;
+                    display: block;
+                    text-transform: uppercase;
+                }
+            .single .post-content .sidebar .category-metas a {
+                display: inline-block;
+                margin-right: 70px;
+                margin-bottom: 5px;
+            }
+            .single .post-content .sidebar .category-metas .type {
+                width: auto;
+                text-align: left;
+                padding:0px 10px;
+                color: #fff;
+                font-size: 19px;
+                font-family: "Roboto Condensed";
+                font-weight: 300;
+                line-height: 32px;
+                text-transform: uppercase;
+            }   
+                .single .post-content .sidebar .category-metas .type .fa {margin-right: 10px;}
+        
         .single .post-content .article {
             font-size: 15px;
             line-height: 1.6;

@@ -20,7 +20,7 @@
 	}
 
 	//Muestra Tipo de artículo + Primera categoría
-	function ungrynerd_cat_links($post_id) {
+	function ungrynerd_cat_links($post_id, $show_all = false) {
 		$return = '<div class="category-metas">';
 
 		$post_type = get_post_type($post_id);
@@ -29,7 +29,7 @@
 			if ($types) {
 				$type = array_pop($types);
 				if (!is_wp_error($type)) {
-					$return .= '<a class="type" href="' . get_term_link($type->slug, 'tipo') . '"><i class="' . get_option('ungrynerd_' . $type->slug . '_icon') . '"></i></a>';
+					$return .= '<a class="type" href="' . get_term_link($type->slug, 'tipo') . '"><i class="' . get_option('ungrynerd_' . $type->slug . '_icon') . '"></i>' . ($show_all ? $type->name : '') . '</a>';
 				}
 			}
 		} elseif ($post_type == 'recurso') {
@@ -38,10 +38,19 @@
 
 		$cats = get_the_terms( $post_id,'category');
 		if ($cats) {
-			$cat = array_pop($cats);
-			if (!is_wp_error($cat)) {
-				$return .= '<a class="cat ' . $cat->slug . '" href="' . get_term_link($cat->slug, 'category') . '">' . $cat->name . '</a>';
+			if ($show_all) {
+				foreach ($cats as $cat) {
+					if (!is_wp_error($cat)) {
+						$return .= '<a class="cat ' . $cat->slug . '" href="' . get_term_link($cat->slug, 'category') . '">' . $cat->name . '</a>';
+					}
+				}
+			} else {
+				$cat = array_pop($cats);
+				if (!is_wp_error($cat)) {
+					$return .= '<a class="cat ' . $cat->slug . '" href="' . get_term_link($cat->slug, 'category') . '">' . $cat->name . '</a>';
+				}
 			}
+			
 		}
 		$return .= '</div>';
 		return $return;
