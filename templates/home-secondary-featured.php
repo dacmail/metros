@@ -2,7 +2,7 @@
 <?php while ($featured->have_posts()) : $featured->the_post(); ?>
 	<?php $posts_excluded[] = get_the_ID();  ?>
 	<article <?php post_class('featured-secondary'); ?> id="featured-<?php the_ID(); ?>">
-		<div class="image"><?php the_post_thumbnail('featured-secondary'); ?></div>
+		<div class="image"><?php the_post_thumbnail('featured-secondary', array('class' => 'img-responsive')); ?></div>
 		<?php echo ungrynerd_cat_links(get_the_ID()); ?>
 		<h1 class="post-title">
 			<a href="<?php the_permalink() ?>" title="Enlace a <?php the_title_attribute(); ?>">

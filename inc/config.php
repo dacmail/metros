@@ -33,7 +33,9 @@
 		register_nav_menus(
 			array(
 			  'main' => 'Menu principal',
-			  'secondary' => 'Menu secundario'
+			  'secondary' => 'Menu secundario',
+			  'main-foot' => 'Menu principal (footer)',
+			  'secondary-foot' => 'Menu secundario (footer)'
 			)
 		);
 	}
@@ -42,5 +44,7 @@
 	add_theme_support( 'post-thumbnails' );
 	if ( function_exists( 'add_image_size' ) ) {
 		add_image_size( 'featured-secondary', 800, 800, false );
+		add_image_size( 'dato', 400, 290, true );
+		add_image_size( 'featured-big', 1200, 1200, false );
 	}
 ?>

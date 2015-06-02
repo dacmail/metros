@@ -194,10 +194,15 @@ class Ungrynerd_El_Dato extends WP_Widget {
         //Código para mostrar en el frontend
         $query = new WP_Query(array(
                     'posts_per_page' => 1,
+                    'post_type' => array('dato')
                 ));
         ?>
         <?php while ($query->have_posts()) : $query->the_post(); ?>
-            DATO
+            <a href="<?php echo get_post_meta(get_the_ID(), '_ungrynerd_dato_link', true); ?>" class="dato">
+                <?php echo wp_get_attachment_image(get_post_meta(get_the_ID(), '_ungrynerd_dato_image', true), 'dato'); ?>
+                <span class="number"><?php echo get_post_meta(get_the_ID(), '_ungrynerd_dato_number', true); ?></span>
+                <span class="text"><?php echo get_post_meta(get_the_ID(), '_ungrynerd_dato_text', true); ?></span>
+            </a>
         <?php endwhile; ?>
         <?php
         wp_reset_query();

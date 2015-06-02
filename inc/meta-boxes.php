@@ -33,6 +33,39 @@ $meta_boxes[] = array(
 	            )
         ),
     );
+
+$meta_boxes[] = array(
+        'id'         => 'dato_options',
+        'title'      =>  __('El dato'),
+        'pages'      => array('dato' ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields'     => array(
+            array(
+	                'name' =>  __('Número'),
+	                'id' => $prefix . 'dato_number',
+	                'type' => 'text',
+	            ),
+            array(
+	                'name' =>  __('Texto'),
+	                'id' => $prefix . 'dato_text',
+	                'type' => 'text',
+	            ),
+            array(
+	                'name' =>  __('Enlace'),
+	                'id' => $prefix . 'dato_link',
+	                'type' => 'text',
+	            ),
+            array(
+	                'name' =>  __('Image'),
+	                'id' => $prefix . 'dato_image',
+	                'type' => 'image_advanced',
+	                'max_file_uploads' => 1,
+	            ),
+        ),
+    );
+
 function ungrynerd_custom_terms_list() {
 	$select_terms = get_terms(array('tipo','category'));
 	$taxonomies = array();
