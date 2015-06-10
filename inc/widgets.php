@@ -117,7 +117,7 @@ class Ungrynerd_Analistas extends WP_Widget {
                         array(
                             'taxonomy'         => 'tipo',
                             'field'            => 'slug',
-                            'terms'            => array( 'analisis'),
+                            'terms'            => array('analisis'),
                         )
                     )
                 ));
