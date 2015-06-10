@@ -45,5 +45,12 @@
 			<?php include(locate_template('templates/related-posts.php')); ?>
 		</div>
 	</div>
+	<div class="comments-wrap container">
+		<div class="row">
+			<div class="col-sm-9 col-sm-offset-3">
+				<?php comments_template('/templates/comments.php'); ?>
+			</div>
+		</div>
+	</div>
 </div>
 <?php get_footer() ?>

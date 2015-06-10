@@ -21,7 +21,7 @@ body, input, textarea {
 /* Commons */
 a {
     text-decoration:none;
-    color:;
+    color: #FF434A;
     -webkit-transition: opacity 0.3s ease-in;
     -o-transition: opacity 0.3s ease-in;
     transition: opacity 0.3s ease-in;
@@ -390,6 +390,87 @@ body {
             font-size: 25px;
             margin-top: 10px;
         }
+
+/* Comentarios */
+#respond {
+
+}
+#respond .logged-in-as, .comment-notes {font-size: 13px;}
+.comments-title {
+    font-size: 43px;
+    color:#191919;
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E5E5E5;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+#respond .form-group label {
+    display: none;
+}
+.form-control {
+    border:1px solid #E5E5E5;
+    border-radius: 0px;
+    height: 40px;
+    box-shadow: none;
+}
+.form-submit {
+    text-align: right;
+}
+.btn {
+    border:0px;
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-family: "Roboto Condensed";
+    padding:20px;
+}
+    .btn-primary {
+        color: #fff;
+        background-color: #FF434A;
+        border-color: #FF434A;
+    }
+    .btn-primary:hover {
+        background-color: #FF434A;
+        opacity: 0.8;
+    }
+#comments {}
+    #comments .comment {
+        position: relative;
+        
+        list-style: none;
+    }
+        #comments .comment .avatar-wrap {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: -80px;
+            top: 0px;
+        }
+        #comments .comment .comment-content {
+            font-weight: 300;
+            color:#7F7F7F;
+            font-size: 14px;
+            line-height: 1.7;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #E5E5E5;
+        }
+            #comments .comment .comment-content .author {
+                margin-top:0px;
+                font-family: "Roboto Condensed";
+                font-weight: 700;
+                color:#191919;
+                font-size: 17px;
+            }
+                #comments .comment .comment-content .author a {color:#191919;}
+                #comments .comment .comment-content .author time, #comments .comment .comment-content .author time a {
+                    font-weight: 300;
+                    color:#7F7F7F;
+                }
+    .comment-reply-title a, .comment-reply-link {
+        color: #FF434A;
+    }
 /* Sidebar */
 #sidebar {
     padding-left: 60px;

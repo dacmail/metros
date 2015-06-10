@@ -1,19 +1,23 @@
 <?php 
 	// Listado de comentarios
-	function comentarios($comment, $args, $depth) {
+	function ungrynerd_comentarios($comment, $args, $depth) {
 	   $GLOBALS['comment'] = $comment; ?>
 	   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
 	     <article id="comment-<?php comment_ID(); ?>" class="clearfix">
-		  <?php echo get_avatar($comment,$size='75' ); ?>
+		  	<div class="avatar-wrap"><?php echo get_avatar($comment,$size='75' ); ?></div>
 	    	<div class="comment-content">
 	    		<h5 class="author">
-					<?php comment_author_link(); ?>
+					<?php comment_author_link(); ?> 
+					<time datetime="<?php echo comment_date('c'); ?>"><a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)); ?>"><?php printf(__('%1$s', 'wsl'), get_comment_date(),  get_comment_time()); ?></a></time>
 					<?php if ($comment->comment_approved == '0') : ?>
-			         	<em><?php _e('Your comment is awaiting moderation.', 'ungrynerd') ?></em>
+			         	<em><?php _e('Tu comentario está pendiente de moderación.', 'wsl') ?></em>
 			      	<?php endif; ?>
-			      	<?php edit_comment_link(__('(Edit)', 'ungrynerd'),'  ','') ?>
+			      	<?php edit_comment_link(__('(Editar)', 'wsl'),'  ','') ?>
 				</h5>
 	    		<?php comment_text() ?>
+	    		<div class="reply text-right">
+                    <?php comment_reply_link(array_merge($args, array('reply_text' => '<i class="fa fa-reply"></i> Responder', 'add_below' => "comment", 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+                </div>
 	    	</div>
 	     </article>
 	<?php
