@@ -1,7 +1,7 @@
 <?php 
     function ungrynerd_type() {
         register_taxonomy("tipo",
-                    array("post"),
+                    array("post", "analisis"),
                     array(
                         "hierarchical" => true,
                         "label" => __( "Tipos de artículo", 'framework'),

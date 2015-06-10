@@ -16,7 +16,7 @@
 	// Redirección para no logueados
 	add_action('wp','proximamente');
 	function proximamente() {
-		if ( !is_user_logged_in()) { header("Location: http://google.com/"); }
+		if ( !is_user_logged_in()) { header("Location: http://metroscopia.org/"); }
 	}
 
 ?>
