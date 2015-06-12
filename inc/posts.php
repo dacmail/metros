@@ -8,6 +8,7 @@
                         "singular_label" => __( "Tipo de artículo", 'framework'),
                         "rewrite" => array( 'slug' => 'articulos', 'hierarchical' => true),
                         'show_in_nav_menus' => true,
+                        'show_admin_column' => true,
                         )
                     );
         register_taxonomy("metroscopia-dinamico_cat",
@@ -18,6 +19,7 @@
                         "singular_label" => __( "XX", 'framework'),
                         "rewrite" => array( 'slug' => 'xx', 'hierarchical' => true),
                         'show_in_nav_menus' => true,
+                        'show_admin_column' => true,
                         )
                     );
     }
@@ -33,10 +35,10 @@
      */
     function codex_dato_init() {
         $labels = array(
-            'name'               => _x( 'datos', 'post type general name', 'your-plugin-textdomain' ),
-            'singular_name'      => _x( 'dato', 'post type singular name', 'your-plugin-textdomain' ),
-            'menu_name'          => _x( 'datos', 'admin menu', 'your-plugin-textdomain' ),
-            'name_admin_bar'     => _x( 'dato', 'add new on admin bar', 'your-plugin-textdomain' ),
+            'name'               => _x( 'Datos', 'post type general name', 'your-plugin-textdomain' ),
+            'singular_name'      => _x( 'Dato', 'post type singular name', 'your-plugin-textdomain' ),
+            'menu_name'          => _x( 'Datos', 'admin menu', 'your-plugin-textdomain' ),
+            'name_admin_bar'     => _x( 'Dato', 'add new on admin bar', 'your-plugin-textdomain' ),
             'add_new'            => _x( 'Add New', 'dato', 'your-plugin-textdomain' ),
             'add_new_item'       => __( 'Add New dato', 'your-plugin-textdomain' ),
             'new_item'           => __( 'New dato', 'your-plugin-textdomain' ),
@@ -61,13 +63,13 @@
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => null,
-            'taxonomies' => array('category', 'post_tag', 'metroscopia-dinamico_cat'),
+            'taxonomies' => array('category', 'post_tag'),
             'supports'           => array( 'title', 'custom-fields','editor', 'author', 'thumbnail', 'excerpt', 'comments' )
         );
 
-        register_post_type( 'analisis', $args );
-        register_post_type( 'clima-social', $args );
-        register_post_type( 'serie-temporal', $args );
+        //register_post_type( 'analisis', $args );
+        //register_post_type( 'clima-social', $args );
+        //register_post_type( 'serie-temporal', $args );
         register_post_type( 'dato', $args );
     }
 ?>
