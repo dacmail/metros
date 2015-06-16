@@ -43,8 +43,11 @@
 	// Soporte para miniaturas y definición de tamaños
 	add_theme_support( 'post-thumbnails' );
 	if ( function_exists( 'add_image_size' ) ) {
+		add_image_size( 'slideshow', 900, 560, false );
 		add_image_size( 'featured-secondary', 800, 800, false );
 		add_image_size( 'dato', 400, 290, true );
+		add_image_size( 'cat-thumb', 400, 250, true );
+		add_image_size( 'cat-secondary', 375, 200, true );
 		add_image_size( 'featured-big', 1200, 1200, false );
 	}
 ?>
