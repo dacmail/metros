@@ -655,6 +655,19 @@ body {
                 vertical-align: middle;
                 color:#fff;
             }
+            #bar {
+                width: 0%;
+                max-width: 100%;
+                height: 5px;
+                background: #3987CD;
+            }
+            #progressBar {
+                width: 100%;
+                background: #E5E5E5;
+                position: relative;
+                top: -1px;
+                z-index: 9999;
+            }
     .two-columns-block {
         margin-bottom: 40px;
     }
@@ -663,6 +676,35 @@ body {
         }
         .two-columns-block .post-title {
             font-size: 23px;
+        }
+    .secondary-cat-featured {
+        margin-bottom: 40px;
+        position: relative;
+    }
+        .secondary-cat-featured .image {
+            width: 50%;
+            height: auto;
+            display: block;
+        }
+        .secondary-cat-featured .title-wrap {
+            width: 60%;
+            left: 40%;
+            top: 0px;
+            position: absolute;
+            height: 100%;
+            padding:20px 20px 20px 10%;
+            box-shadow: inset -600px 0px 117px -175px #000000;
+        }
+        .secondary-cat-featured .post-title {
+            display: table;
+            height: 100%;
+            margin: 0px;
+            
+        }
+        .secondary-cat-featured .post-title a {
+            color:#fff;
+            display: table-cell;
+            vertical-align: middle;
         }
 /* Footer */
 #footer {
