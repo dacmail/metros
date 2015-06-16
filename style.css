@@ -655,6 +655,15 @@ body {
                 vertical-align: middle;
                 color:#fff;
             }
+    .two-columns-block {
+        margin-bottom: 40px;
+    }
+        .two-columns-block .image {
+            margin-bottom: 15px;
+        }
+        .two-columns-block .post-title {
+            font-size: 23px;
+        }
 /* Footer */
 #footer {
     color:#999999;

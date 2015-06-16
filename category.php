@@ -8,6 +8,24 @@
 					<?php include(locate_template('templates/cat-featured.php')); ?>
 				</div>
 				<div class="col-sm-9 sidebar-separator">
+					<div class="two-columns-block">
+						<div class="row">
+							<?php 
+								$block_posts = new WP_Query(array(
+									'tax_query' => array(
+										array(
+											'taxonomy' => $term->taxonomy,
+											'field'    => 'term_id',
+											'terms'    => array($term->term_id),
+										)
+									),
+									'posts_per_page' => 2,
+									'post__not_in' => $posts_excluded
+									)); ?>
+								<?php include(locate_template('templates/2-columns-block.php')); ?>
+						</div>
+					</div>
+					<?php include(locate_template('templates/cat-secondary-featured.php')); ?>
 					<div class="row">
 						<div class="col-sm-7 primary-home" id="block_1_home">
 							<?php 
