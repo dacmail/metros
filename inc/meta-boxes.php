@@ -14,7 +14,7 @@ $meta_boxes = array();
 $meta_boxes[] = array(
         'id'         => 'home_options',
         'title'      =>  __('Portada'),
-        'pages'      => array('post' ), // Post type
+        'pages'      => array('post', 'recurso'), // Post type
         'context'    => 'normal',
         'priority'   => 'high',
         'show_names' => true, // Show field names on the left
@@ -66,7 +66,7 @@ $meta_boxes[] = array(
         'show_names' => true, // Show field names on the left
         'fields'     => array(
             array(
-	                'name' =>  __('Número'),
+	                'name' =>  __('Cifra'),
 	                'id' => $prefix . 'dato_number',
 	                'type' => 'text',
 	            ),
@@ -86,6 +86,32 @@ $meta_boxes[] = array(
 	                'type' => 'image_advanced',
 	                'max_file_uploads' => 1,
 	            ),
+        ),
+    );
+
+$meta_boxes[] = array(
+        'id'         => 'recurso_options',
+        'title'      =>  __('Recurso'),
+        'pages'      => array('recurso' ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields'     => array(
+            array(
+	                'name' =>  __('Enlace relacionado'),
+	                'id' => $prefix . 'recurso_link',
+	                'type' => 'text',
+	            ),
+            array(
+	                'name' =>  __('Título enlace relacionado'),
+	                'id' => $prefix . 'recurso_link_text',
+	                'type' => 'text',
+	            ),
+            array(
+	                'name' =>  __('URL Video'),
+	                'id' => $prefix . 'recurso_video',
+	                'type' => 'oembed',
+	            )
         ),
     );
 
