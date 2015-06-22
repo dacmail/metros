@@ -706,6 +706,37 @@ body {
             display: table-cell;
             vertical-align: middle;
         }
+/* TAG / Tema */
+.tag-desc {
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-family: "Roboto Condensed";
+    color:#7F7F7F;
+}
+.tag-title {
+    font-size: 40px;
+    font-weight: 100;
+    color:#FF444B;
+    position: relative;
+}
+    .tag-title:before {
+        position: absolute;
+        left: -40px;
+        top:13px;
+        display: inline-block;
+        font: normal normal normal 25px/1 FontAwesome;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: translate(0, 0);
+        content: "\f02c";
+    }
+/* TAG Primary block */
+    .primary-home.no-home .image {
+        width: auto;
+        height: auto;
+    }
+
 /* Footer */
 #footer {
     color:#999999;

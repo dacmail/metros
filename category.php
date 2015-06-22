@@ -3,6 +3,9 @@
 	<div id="container" class="clearfix">
 		<section class="container" id="main-home-content">
 			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="block-title main"><?php single_term_title(); ?></h1>
+				</div>
 				<div class="col-sm-12 slideshow-wrap">
 					<?php $posts_excluded = array(); ?>
 					<?php include(locate_template('templates/cat-featured.php')); ?>
