@@ -47,6 +47,7 @@
 		add_image_size( 'featured-secondary', 800, 800, false );
 		add_image_size( 'dato', 400, 290, true );
 		add_image_size( 'cat-thumb', 400, 250, true );
+		add_image_size( 'cat-med', 600, 375, true );
 		add_image_size( 'cat-secondary', 375, 200, true );
 		add_image_size( 'featured-big', 1200, 1200, false );
 	}
