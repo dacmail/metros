@@ -6,10 +6,6 @@
 		//Slideshow
 		var slideLoaded = imagesLoaded($('.slideshow'));
 		slideLoaded.on('done', configureSlide);
-		
- 
-		
-
 		$elem = $('.slideshow').owlCarousel({
 			items:1,
 			loop:true,
@@ -19,6 +15,15 @@
 			onInitialized: progressBar,
 			onTranslated : moved,
 			onDragged : pauseOnDragging
+		});
+
+		//Video play
+		$('.play').on('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			$('.play').hide();
+			$('.play').parent().children('.wp-post-image').hide();
+			$('.play').parent().children('.video-wrap').show();
 		});
 	});
 	$(window).load(function() {

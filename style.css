@@ -96,6 +96,20 @@ body {
 }
 .dark {background: #000000;}
     .dark .block-title, .dark .post-title, .dark .more a, .dark .post-title a {color:#fff !important;}
+
+.video-wrap {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.video-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 /* Header */
 #header {
     padding:10px 0px 0px 0px;
@@ -736,7 +750,44 @@ body {
         width: auto;
         height: auto;
     }
-
+/* Recursos */
+.big-featured {}
+    .big-featured .image-wrap {
+        margin-bottom:40px;
+    }
+    .big-featured .image-wrap .container {
+        position: relative;
+    }
+    .big-featured .image-wrap.video {
+        background-color: #000;
+    }
+        .big-featured .image-wrap.video .video-wrap {display: none;}
+        .big-featured .image-wrap.video .play {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: url('images/play.jpg') center center no-repeat rgba(0,0,0,0.5);
+        }
+    .big-featured .meta .date {
+        font-family: "Roboto Condensed";
+        font-weight: 300;
+        font-size: 15px;
+        color:#B2B2B2;
+    }
+    .big-featured .meta .share {
+        text-align: right;
+    }
+    .big-featured .post-title {
+        font-size: 50px;
+    }
+    .big-featured .recurso {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #E5E5E5;
+    }
 /* Footer */
 #footer {
     color:#999999;

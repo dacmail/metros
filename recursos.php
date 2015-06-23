@@ -1,11 +1,25 @@
 <?php /* Template Name: Recursos */ ?>
 <?php get_header() ?>
 	<div id="container" class="clearfix">
-		<section class="container" id="main-home-content">
+		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
 					<h1 class="block-title main">Recursos</h1>
 				</div>
+			</div>
+		</div>
+
+		<section class="big-featured">
+			<?php 
+			$block_posts = new WP_Query(array(
+				'post_type' => array('recurso'),
+				'posts_per_page' => 1,
+				'post__not_in' => $posts_excluded
+				)); ?>
+			<?php include(locate_template('templates/big-featured.php')); ?>
+		</section>
+		<section class="container" id="main-home-content">
+			<div class="row">
 				<div class="col-sm-12">
 					<div class="row">
 						<?php 
