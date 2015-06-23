@@ -19,7 +19,7 @@
                         "singular_label" => __( "XX", 'framework'),
                         "rewrite" => array( 'slug' => 'xx', 'hierarchical' => true),
                         'show_in_nav_menus' => true,
-                        'show_admin_column' => true,
+                        'show_admin_column' => false,
                         )
                     );
     }

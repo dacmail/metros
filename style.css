@@ -854,6 +854,17 @@ a img.aligncenter {
 .gallery-caption {}
 .sticky {}
 
+/* COLORES CATEGORIAS */
+.cat.desigualdad {background-color:;}
+.cat.economia {background-color:;}
+.cat.elecciones {background-color:;}
+.cat.internacional {background-color:;}
+.cat.nacionalismo {background-color:;}
+.cat.politica {background-color:;}
+.cat.sociedad {background-color:;}
+.cat.sostenibilidad {background-color:;}
+
+
 @media only screen and  (max-width : 1024px) {}
 @media only screen and  (max-width : 768px) {
     
