@@ -18,18 +18,20 @@
 				)); ?>
 			<?php include(locate_template('templates/big-featured.php')); ?>
 		</section>
-		<section class="container" id="main-home-content">
+		<section class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<div class="row">
-						<?php 
-							$size = 'med';
-							$block_posts = new WP_Query(array(
-								'post_type' => array('recurso'),
-								'posts_per_page' => 2,
-								'post__not_in' => $posts_excluded
-								)); ?>
-							<?php include(locate_template('templates/recursos-block.php')); ?>
+					<div class="recursos-bigger">
+						<div class="row">
+							<?php 
+								$size = 'med';
+								$block_posts = new WP_Query(array(
+									'post_type' => array('recurso'),
+									'posts_per_page' => 2,
+									'post__not_in' => $posts_excluded
+									)); ?>
+								<?php include(locate_template('templates/recursos-block.php')); ?>
+						</div>
 					</div>
 				</div>
 				<div class="col-sm-9 sidebar-separator">
