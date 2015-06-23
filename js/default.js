@@ -25,6 +25,18 @@
 			$('.play').parent().children('.wp-post-image').hide();
 			$('.play').parent().children('.video-wrap').show();
 		});
+
+		//Equal heights
+		imagesLoaded($('.row.equals')).on('done', function() {
+			$(".row.equals").each(function() {
+				var heights = $(this).find(".col-sm-6").map(function() {
+				    return $(this).outerHeight();
+				}).get(), maxHeight = Math.max.apply(null, heights);
+
+				$(this).find(".col-sm-6").outerHeight(maxHeight);
+			});
+		});
+		
 	});
 	$(window).load(function() {
 		//JS

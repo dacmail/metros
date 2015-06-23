@@ -1,0 +1,50 @@
+<?php get_header() ?>
+	<div id="container" class="clearfix">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="block-title main">Recursos</h1>
+				</div>
+			</div>
+		</div>
+		<section class="big-featured">
+			<?php $block_posts = $wp_query; ?>
+			<?php include(locate_template('templates/big-featured.php')); ?>
+		</section>
+		<section class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="recursos-bigger">
+						<div class="row">
+							<?php 
+								$size = 'med';
+								$block_posts = new WP_Query(array(
+									'post_type' => array('recurso'),
+									'posts_per_page' => 2,
+									'post__not_in' => $posts_excluded
+									)); ?>
+								<?php include(locate_template('templates/recursos-block.php')); ?>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-9 sidebar-separator">
+					<div class="two-columns-block">
+						<div class="row equals">
+							<?php 
+								$size = 'thumb';
+								$block_posts = new WP_Query(array(
+									'post_type' => array('recurso'),
+									'posts_per_page' => 8,
+									'post__not_in' => $posts_excluded
+									)); ?>
+								<?php include(locate_template('templates/recursos-block.php')); ?>
+						</div>
+					</div>
+				</div>
+				<?php update_option('ungrynerd_excludes', $posts_excluded, '', 'yes'); ?>
+				<?php get_sidebar('home') ?>
+				<?php $posts_excluded = get_option('ungrynerd_excludes'); ?>
+			</div>
+		</section>
+	</div>
+<?php get_footer() ?>

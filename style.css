@@ -755,6 +755,10 @@ body {
     .big-featured .image-wrap {
         margin-bottom:40px;
     }
+    .big-featured .image-wrap .wp-post-image {
+        width: 100%;
+        height: auto;
+    }
     .big-featured .image-wrap .container {
         position: relative;
     }
