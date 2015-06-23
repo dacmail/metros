@@ -36,7 +36,7 @@
 				</div>
 				<div class="col-sm-9 sidebar-separator">
 					<div class="two-columns-block">
-						<div class="row">
+						<div class="row equals">
 							<?php 
 								$size = 'thumb';
 								$block_posts = new WP_Query(array(

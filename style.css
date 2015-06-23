@@ -244,6 +244,17 @@ body {
         }
 /* Home general */
 #main-home-content {margin-bottom: 40px;}
+/* Primary featured */
+.big-featured.home {}
+    .big-featured.home .post-title {
+        color:#fff;
+        position: absolute;
+        bottom:25px;
+        left: 40px;
+        font-size: 50px;
+        padding-right: 30px;
+    }
+        .big-featured.home .post-title a {color:#fff;}
 /* Secondary Featured */
     .featured-secondary {
         margin-bottom: 20px;

@@ -1,4 +1,4 @@
-<?php $featured = new WP_Query(array('meta_key' => '_ungrynerd_featured2', 'meta_value' => 1, 'post_type'=> array('post'), 'posts_per_page' => -1)); ?>
+<?php $featured = new WP_Query(array('meta_key' => '_ungrynerd_featured2', 'meta_value' => 1, 'post_type'=> array('post','recurso'), 'posts_per_page' => 1)); ?>
 <?php while ($featured->have_posts()) : $featured->the_post(); ?>
 	<?php $posts_excluded[] = get_the_ID();  ?>
 	<article <?php post_class('featured-secondary'); ?> id="featured-<?php the_ID(); ?>">
