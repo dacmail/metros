@@ -951,23 +951,32 @@ a img.aligncenter {
 .sticky {}
 
 /* COLORES CATEGORIAS */
-.cat.desigualdad {background-color:;}
-.cat.economia {background-color:;}
-.cat.elecciones {background-color:;}
-.cat.internacional {background-color:;}
-.cat.nacionalismo {background-color:;}
-.cat.politica {background-color:;}
-.cat.sociedad {background-color:;}
-.cat.sostenibilidad {background-color:;}
+.cat.desigualdad {background-color:#C17759;}
+.cat.economia {background-color:#5CB796;}
+.cat.elecciones {background-color:#F44A1C;}
+.cat.internacional {background-color:#3A88CE;}
+.cat.nacionalismo {background-color:#E0BC4B;}
+.cat.politica {background-color:#E58925#99C45B;}
+.cat.sociedad {background-color:#9C7FC6;}
+.cat.sostenibilidad {background-color:#99C45B;}
 
-.page-template-recursos 
-.page-template-recursos
-.page-template-recursos
-.page-template-recursos
-.page-template-recursos
-.page-template-recursos
-.page-template-recursos
-.page-template-recursos
+#header #secondary-menu .nav .menu-item.menu-desigualdad:hover {border-color:#C17759;}
+#header #secondary-menu .nav .menu-item.menu-economia:hover {border-color:#5CB796;}
+#header #secondary-menu .nav .menu-item.menu-elecciones:hover {border-color:#F44A1C;}
+#header #secondary-menu .nav .menu-item.menu-internacional:hover {border-color:#3A88CE;}
+#header #secondary-menu .nav .menu-item.menu-nacionalismo:hover {border-color:#E0BC4B;}
+#header #secondary-menu .nav .menu-item.menu-politica:hover {border-color:#E58925#99C45B;}
+#header #secondary-menu .nav .menu-item.menu-sociedad:hover {border-color:#9C7FC6;}
+#header #secondary-menu .nav .menu-item.menu-sostenibilidad:hover {border-color:#99C45B;}
+
+.page-template-recursos .recurso.category-desigualdad .image img {border-bottom: 5px solid #C17759;}
+.page-template-recursos .recurso.category-economia .image img {border-bottom: 5px solid #5CB796;}
+.page-template-recursos .recurso.category-elecciones .image img {border-bottom: 5px solid #F44A1C;}
+.page-template-recursos .recurso.category-internacional .image img {border-bottom: 5px solid #3A88CE;}
+.page-template-recursos .recurso.category-nacionalismo .image img {border-bottom: 5px solid #E0BC4B;}
+.page-template-recursos .recurso.category-politica .image img {border-bottom: 5px solid #E58925#99C45B;}
+.page-template-recursos .recurso.category-sociedad .image img {border-bottom: 5px solid #9C7FC6;}
+.page-template-recursos .recurso.category-sostenibilidad .image img {border-bottom: 5px solid #99C45B;}
 
 
 @media only screen and  (max-width : 1024px) {}
