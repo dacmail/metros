@@ -336,9 +336,10 @@ body {
     }
         .single .post-content .sidebar {}
             .single .post-content .sidebar .by, .by a {
-                color:#7F7F7F;
+                color:#191919;
+
                 font-family: "Roboto Condensed";
-                font-weight: 300;
+                font-weight: bold;
                 font-size: 15px;
                 margin-top: 10px;
                 margin-bottom: 30px;
@@ -346,8 +347,8 @@ body {
                 .single .post-content .sidebar .by span {
                     font-family: "Roboto Condensed";
                     font-size: 23px;
-                    font-weight: bold;
-                    color:#191919;
+                    font-weight: 300;
+                    color:#7f7f7f;
                     display: block;
                     text-transform: uppercase;
                 }
