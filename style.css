@@ -51,6 +51,10 @@ body {
     padding-right: 30px;
     border-right:1px solid #E5E5E5;
 }
+.image {
+    border:1px solid #E5E5E5;
+    margin-bottom: 10px;
+}
 .block-title {
     font-family: "Oswald";
     font-size: 35px;
@@ -82,9 +86,7 @@ body {
     display: inline-block;
 }
     .more a:before {
-        position: absolute;
-        left: -20px;
-        top:0px;
+        margin-right: 5px;
         display: inline-block;
         font: normal normal normal 14px/1 FontAwesome;
         font-size: inherit;
@@ -117,10 +119,13 @@ body {
 }
     #header #main-menu {margin-top:20px;}
     #header #main-menu .menu-item {
-        padding:0px 15px;
+        padding:0px 30px;
         line-height: 40px;
         color:#999999;
+        font-family: "Roboto Condensed";
+        font-weight: 300;
     }
+    #header #main-menu .menu-item .fa {margin-right: 5px;}
     #header #main-menu .menu-item:after {
         border-right: 1px solid #E5E5E5;
         right: 0px;
@@ -143,7 +148,7 @@ body {
         padding:0px;
         text-transform: uppercase;
         color:#999999;
-        font-size: 15px;
+        font-size: 16px;
 
     }
     #header #main-menu .menu-item:hover, #header #main-menu .menu-item a:hover {
@@ -162,7 +167,7 @@ body {
             text-align: center;
             padding:0px 10px;
             position: relative;
-            padding-bottom:5px;
+            padding-bottom:10px;
             border-bottom:4px solid transparent;
             bottom: -4px;
         }
@@ -184,7 +189,7 @@ body {
             font-family: "Roboto Condensed";
             font-weight: 300;
             color:#999999;
-            font-size: 14px;
+            font-size: 16px;
         }
             #header #secondary-menu .nav .menu-item:hover {border-color:#000;}
             #header #secondary-menu .nav .menu-item a:hover {
@@ -196,6 +201,8 @@ body {
         color:#191919;
         font-family: "Roboto Condensed";
         font-weight: bold;
+        margin-bottom: 20px;
+        margin-top:15px;
     }
         .post-title a {color:#191919;}
     .category-metas {}
@@ -205,10 +212,17 @@ body {
             height: 32px;
             line-height: 32px;
             color:#fff;
-            font-size: 19px;
+            font-size: 14px;
             text-align: center;
             display: inline-block;
+            position: relative;
+            top:-2px;
         }
+            .category-metas .type .fa {
+                line-height: 32px;
+                color:#fff;
+                font-size: 14px;
+            }
         .category-metas .cat {
             background-color: #DFBB4A;
             color:#fff;
@@ -245,7 +259,9 @@ body {
 /* Home general */
 #main-home-content {margin-bottom: 40px;}
 /* Primary featured */
-.big-featured.home {}
+.big-featured.home {
+    margin-top:-40px;
+}
     .big-featured.home .post-title {
         color:#fff;
         position: absolute;
@@ -261,7 +277,7 @@ body {
     }
         .featured-secondary .image {
             text-align: center;
-            margin-bottom:15px;
+            margin-bottom:10px;
         }
         .featured-secondary .post-title {font-size: 50px;}
 
@@ -284,7 +300,11 @@ body {
             margin-right: 30px;
             margin-bottom: 10px;
         }
-        .primary-home .post-title {font-size: 25px;}
+        .primary-home .post-title {
+            font-size: 25px;
+            margin-top:10px;
+            margin-bottom: 10px;
+        }
 
 /* Home secondary block */
 .secondary-home {
@@ -296,13 +316,17 @@ body {
             margin-bottom:20px;
         }
             .secondary-home .post:last-child, .secondary-home .post.last {border:0px;}
-     .secondary-home .post-title {font-size: 19px;}
+     .secondary-home .post-title {
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
 
 /* Home Multimedia */
 .multimedia-home {
     padding:10px 0px 20px 0px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
+    .multimedia-home .post-title {margin-bottom: 40px;}
 /* SINGLE POST */
 .single .hentry {}
     .single .featured-img {
@@ -501,7 +525,12 @@ body {
 #sidebar {
     padding-left: 60px;
 }
-    #sidebar .widget {margin-bottom:30px;}
+    #sidebar .widget {
+        margin-bottom:40px;
+    }
+        #sidebar .block-title {
+            margin-bottom: 20px;
+        }
 
     /* Busqueda */
     #searchform .wrapper {
@@ -531,6 +560,7 @@ body {
             height: 40px;
             padding:0px 8px;
             color:#B2B2B2;
+            font-family: "Roboto Condensed";
         }
         
     /* Tendencias */
@@ -614,12 +644,12 @@ body {
         }
         #sidebar .dato .number {
             position: absolute;
-            font-size: 100px;
+            font-size: 75px;
             color:#99C45A;
             top:15px;
             left: 15px;
             line-height: 75px;
-            font-family: "Roboto Condensed";
+            font-family: "Oswald";
             font-weight: bold;
         }
         #sidebar .dato .attachment-dato {}
@@ -764,7 +794,8 @@ body {
     }
 /* Recursos */
 .big-featured {}
-    .big-featured .image-wrap {
+    .big-featured .image-wrap, .big-featured .recurso.image-wrap {
+        padding-bottom:0px;
         margin-bottom:40px;
     }
     .big-featured .image-wrap .wp-post-image {
@@ -785,7 +816,7 @@ body {
             position: absolute;
             top: 0px;
             left: 0px;
-            background: url('images/play.jpg') center center no-repeat rgba(0,0,0,0.5);
+            background: url('images/play.png') center center no-repeat rgba(0,0,0,0.5);
         }
     .big-featured .meta .date {
         font-family: "Roboto Condensed";
@@ -838,6 +869,7 @@ body {
 #footer {
     color:#999999;
     font-size: 13px;
+    font-family: "Roboto Condensed";
 }
     #footer .container {
         padding-top:30px;
@@ -849,12 +881,15 @@ body {
     }
     #footer #secondary-menu .menu-item {
         width: 33%;
+        margin-bottom:10px;
     }
     #footer #main-menu .menu-item {
         width: 100%;
         text-transform: uppercase;
         font-size: 15px;
+        margin-bottom:10px;
     }
+        #footer #main-menu .menu-item .fa {display: none;}
     #footer .menu-item a {
         padding:0px 0px;
     }
@@ -865,6 +900,7 @@ body {
     #footer .copy {
         margin-top:30px;
         text-align: center;
+        margin-bottom: 10px;
     }
 /* WordPress Core */
 .alignnone {
@@ -978,6 +1014,24 @@ a img.aligncenter {
 .page-template-recursos .recurso.category-politica .image img {border-bottom: 5px solid #E58925#99C45B;}
 .page-template-recursos .recurso.category-sociedad .image img {border-bottom: 5px solid #9C7FC6;}
 .page-template-recursos .recurso.category-sostenibilidad .image img {border-bottom: 5px solid #99C45B;}
+
+.big-featured .image-wrap.category-desigualdad {border-bottom: 5px solid #C17759;}
+.big-featured .image-wrap.category-economia {border-bottom: 5px solid #5CB796;}
+.big-featured .image-wrap.category-elecciones {border-bottom: 5px solid #F44A1C;}
+.big-featured .image-wrap.category-internacional {border-bottom: 5px solid #3A88CE;}
+.big-featured .image-wrap.category-nacionalismo {border-bottom: 5px solid #E0BC4B;}
+.big-featured .image-wrap.category-politica {border-bottom: 5px solid #E58925#99C45B;}
+.big-featured .image-wrap.category-sociedad {border-bottom: 5px solid #9C7FC6;}
+.big-featured .image-wrap.category-sostenibilidad {border-bottom: 5px solid #99C45B;}
+
+#sidebar .analista.category-desigualdad .post-title:before {background: #C17759;}
+#sidebar .analista.category-economia .post-title:before {background: #5CB796;}
+#sidebar .analista.category-elecciones .post-title:before {background: #F44A1C;}
+#sidebar .analista.category-internacional .post-title:before {background: #3A88CE;}
+#sidebar .analista.category-nacionalismo .post-title:before {background: #E0BC4B;}
+#sidebar .analista.category-politica .post-title:before {background: #E58925#99C45B;}
+#sidebar .analista.category-sociedad .post-title:before {background: #9C7FC6;}
+#sidebar .analista.category-sostenibilidad .post-title:before {background: #99C45B;}
 
 
 @media only screen and  (max-width : 1024px) {}

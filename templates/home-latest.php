@@ -9,7 +9,7 @@
 <?php while ($block_posts->have_posts()) : $block_posts->the_post(); ?>
 	<?php $posts_excluded[] = get_the_ID();  ?>
 	<article <?php post_class('col-sm-4'); ?> id="featured-<?php the_ID(); ?>">
-		<?php the_post_thumbnail('medium'); ?>
+		<?php the_post_thumbnail('medium', array('class' => 'image')); ?>
 		<?php echo ungrynerd_cat_links(get_the_ID()); ?>
 		<h2 class="post-title">
 			<a href="<?php the_permalink() ?>" title="Enlace a <?php the_title_attribute(); ?>">

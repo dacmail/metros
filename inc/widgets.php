@@ -124,7 +124,7 @@ class Ungrynerd_Analistas extends WP_Widget {
         ?>
         <?php while ($query->have_posts()) : $query->the_post(); ?>
             <?php $posts_excluded[] = get_the_ID();  ?>
-            <article class="analista">
+            <article <?php post_class('analista') ?>>
                 <div class="wrap-info clearfix">
                     <?php echo get_avatar( get_the_author_meta( 'ID' ), 80 ); ?>
                     <?php the_author_posts_link(); ?>
