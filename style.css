@@ -10,7 +10,7 @@
 	Tags: one-column, light
 	Text Domain: ungrynerd
 */
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700|Roboto:400,100,300,700,900|Oswald:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700|Roboto:400,100,300,700,900|Oswald:400,700,300|Enriqueta:400,700);
 /* FIXES */
 body, input, textarea {
     -webkit-font-smoothing: antialiased;
@@ -42,7 +42,7 @@ body {
 }
 #content {}
     #content p {
-        margin:10px 0px;
+        margin:20px 0px;
     }
     #content .post-content ul, #content .post-content ol {
         margin:10px;
@@ -330,8 +330,6 @@ body {
 /* SINGLE POST */
 .single .hentry {}
     .single .featured-img {
-        border-bottom: 1px solid #E5E5E5;
-        padding-bottom: 10px;
     }
         .single .featured-img img {
             width: 100%;
@@ -348,8 +346,8 @@ body {
         .single .meta .date {
             font-family: "Roboto Condensed";
             font-weight: 300;
-            font-size: 15px;
-            color:#B2B2B2;
+            font-size: 17px;
+            color:#999;
         }
         .single .meta .share {
             text-align: right;
@@ -361,10 +359,9 @@ body {
         .single .post-content .sidebar {}
             .single .post-content .sidebar .by, .by a {
                 color:#191919;
-
                 font-family: "Roboto Condensed";
                 font-weight: bold;
-                font-size: 15px;
+                font-size: 17px;
                 margin-top: 10px;
                 margin-bottom: 30px;
             }
@@ -392,12 +389,17 @@ body {
                 line-height: 32px;
                 text-transform: uppercase;
             }   
-                .single .post-content .sidebar .category-metas .type .fa {margin-right: 10px;}
+                .single .post-content .sidebar .category-metas .type .fa {
+                    margin-right: 10px;
+                    position: relative;
+                    top:-2px;
+                }
         
         .single .post-content .article {
-            font-size: 15px;
+            font-size: 19px;
+            font-family: "Enriqueta", "Georgia", serif;
             line-height: 1.6;
-            color:#7F7F7F;
+            color:#333;
             border-bottom: 1px solid #E5E5E5;
             margin-bottom: 10px;
         }
@@ -406,6 +408,7 @@ body {
                 position: relative;
                 font-family: "Roboto Condensed";
                 margin:30px 0px;
+                font-size: 17px;
             }
                 .post-content .article .tags a {color:#FF444B;}
                 .post-content .article .tags:before {
@@ -490,6 +493,9 @@ body {
         
         list-style: none;
     }
+        #comments .comment .children {
+            padding-left: 80px;
+        }
         #comments .comment .avatar-wrap {
             position: absolute;
             width: 50px;
@@ -499,9 +505,10 @@ body {
         }
         #comments .comment .comment-content {
             font-weight: 300;
-            color:#7F7F7F;
-            font-size: 14px;
-            line-height: 1.7;
+            color:#333;
+            font-family: "Enriqueta";
+            font-size: 17px;
+            line-height: 2;
             padding-bottom: 15px;
             margin-bottom: 40px;
             border-bottom: 1px solid #E5E5E5;
@@ -519,6 +526,8 @@ body {
                     color:#7F7F7F;
                 }
     .comment-reply-title a, .comment-reply-link {
+        font-family: "Roboto Condensed";
+        font-size: 15px;
         color: #FF434A;
     }
 /* Sidebar */
