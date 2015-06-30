@@ -1,14 +1,4 @@
 <div class="row">
-	<?php $featured = new WP_Query(array('tax_query' => array(
-										array(
-											'taxonomy' => $term->taxonomy,
-											'field'    => 'term_id',
-											'terms'    => array($term->term_id),
-										)
-									),
-									'meta_key' => '_ungrynerd_cat_featured', 
-									'meta_value' => 1, 
-									'posts_per_page' => 3)); ?>
 	<div class="col-sm-9">
 		<div class="slideshow">
 		<?php while ($featured->have_posts()) : $featured->the_post(); ?>

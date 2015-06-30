@@ -6,10 +6,23 @@
 				<div class="col-sm-12">
 					<h1 class="block-title main"><?php single_term_title(); ?></h1>
 				</div>
-				<div class="col-sm-12 slideshow-wrap">
-					<?php $posts_excluded = array(); ?>
-					<?php include(locate_template('templates/cat-featured.php')); ?>
-				</div>
+				<?php $featured = new WP_Query(array('tax_query' => array(
+										array(
+											'taxonomy' => $term->taxonomy,
+											'field'    => 'term_id',
+											'terms'    => array($term->term_id),
+										)
+									),
+									'meta_key' => '_ungrynerd_cat_featured', 
+									'meta_value' => 1, 
+									'posts_per_page' => 3)); ?>
+				<?php if ($featured->have_posts()): ?>
+					<div class="col-sm-12 slideshow-wrap">
+						<?php $posts_excluded = array(); ?>
+
+						<?php include(locate_template('templates/cat-featured.php')); ?>
+					</div>
+				<?php endif ?>
 				<div class="col-sm-9 sidebar-separator">
 					<div class="two-columns-block">
 						<div class="row">
