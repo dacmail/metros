@@ -11,10 +11,10 @@
 				<?php endif ?>
 				<h1 class="post-title"><?php the_title(); ?></h1>
 				<div class="meta row">
-					<div class="col-md-6 date">
+					<div class="col-sm-6 date">
 						<?php the_time('l j \d\e F \d\e Y \- H:i:s'); ?>
 					</div>
-					<div class="col-md-6 share">
+					<div class="col-sm-6 share">
 						<div class="addthis_sharing_toolbox"></div>
 					</div>
 				</div>

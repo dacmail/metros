@@ -398,7 +398,7 @@ body {
             .single .post-content .sidebar .category-metas .type {
                 width: auto;
                 text-align: left;
-                padding:0px 10px;
+                padding:0px 10px 0px 30px;
                 color: #fff;
                 font-size: 19px;
                 font-family: "Roboto Condensed";
@@ -408,8 +408,9 @@ body {
             }   
                 .single .post-content .sidebar .category-metas .type .fa {
                     margin-right: 10px;
-                    position: relative;
-                    top:-2px;
+                    position: absolute;
+                    top:0px;
+                    left: 10px;
                 }
         
         .single .post-content .article {
@@ -1120,6 +1121,7 @@ a img.aligncenter {
 
 @media only screen and  (max-width : 1200px) {}
 @media only screen and  (max-width : 991px) {
+    #container {padding:0px;}
     #header #main-menu .menu-item {
         padding:0px 10px;
     }
@@ -1131,9 +1133,11 @@ a img.aligncenter {
         bottom: 0px;
         height: 23px;
     }
-    .multimedia-home .block-title, #latest .block-title {
+
+    .multimedia-home .block-title, #latest .block-title, .block-title.main {
         margin-left: 25px;
     }
+    .block-title.main {margin-bottom: 20px;}
     #sidebar .dato {
         margin-right: 0px;
     }
@@ -1145,11 +1149,40 @@ a img.aligncenter {
             font-size: 15px;
             line-height: 15px;
         }
+    #sidebar .analista .avatar {
+        width: 30px;
+        margin-left: -50px;
+    }
+    #sidebar .analista .wrap-info a {
+        margin-top: 0px;
+    }
     .primary-home .post-title {
         font-size: 19px;
     }
-    .featured-secondary .post-title, .big-featured.home .post-title {
+    .featured-secondary .post-title, .big-featured.home .post-title,  {
         font-size: 35px;
+    }
+    .slideshow-wrap .slideshow-nav li {
+        padding: 15px;
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .secondary-cat-featured .post-title {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .slideshow-wrap .post-title {
+        font-size: 30px;
+    }
+    .primary-home .image {
+        width: 85px;
+        height: 85px; 
+    }
+    .single .post-title {
+        font-size: 45px;
+    }
+    .related-posts .post-title {
+        font-size: 20px;
     }
 }
 @media only screen and  (max-width : 768px) {
