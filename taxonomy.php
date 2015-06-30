@@ -1,17 +1,68 @@
 <?php get_header() ?>
-<?php while (have_posts()) : the_post(); ?>
+	<?php $term = get_queried_object(); ?>
 	<div id="container" class="clearfix">
 		<section class="container" id="main-home-content">
 			<div class="row">
-				<div class="col-sm-9 sidebar-separator">
+				<div class="col-sm-12">
+					<h1 class="block-title main"><?php single_term_title(); ?></h1>
+				</div>
+				<div class="col-sm-12 slideshow-wrap">
 					<?php $posts_excluded = array(); ?>
-					<?php include(locate_template('templates/home-secondary-featured.php')); ?>
+					<?php include(locate_template('templates/cat-featured.php')); ?>
+				</div>
+				<div class="col-sm-9 sidebar-separator">
+					<div class="two-columns-block">
+						<div class="row">
+							<?php 
+								$block_posts = new WP_Query(array(
+									'tax_query' => array(
+										array(
+											'taxonomy' => $term->taxonomy,
+											'field'    => 'term_id',
+											'terms'    => array($term->term_id),
+										)
+									),
+									'posts_per_page' => 2,
+									'post__not_in' => $posts_excluded
+									)); ?>
+								<?php include(locate_template('templates/2-columns-block.php')); ?>
+						</div>
+					</div>
+					<?php include(locate_template('templates/cat-secondary-featured.php')); ?>
 					<div class="row">
 						<div class="col-sm-7 primary-home" id="block_1_home">
-							<?php include(locate_template('templates/home-primary-block.php')); ?>
+							<?php 
+							$block_posts = new WP_Query(array(
+								'tax_query' => array(
+									array(
+										'taxonomy' => $term->taxonomy,
+										'field'    => 'term_id',
+										'terms'    => array($term->term_id),
+									)
+								),
+								'posts_per_page' => 3,
+								'post__not_in' => $posts_excluded
+								)); ?>
+							<div class="block-wrap">
+								<?php include(locate_template('templates/primary-block.php')); ?>
+							</div>
 						</div>
 						<div class="col-sm-5 secondary-home" id="block_1_home">
-							<?php include(locate_template('templates/home-secondary-block.php')); ?>
+							<?php 
+							$block_posts = new WP_Query(array(
+								'tax_query' => array(
+									array(
+										'taxonomy' => $term->taxonomy,
+										'field'    => 'term_id',
+										'terms'    => array($term->term_id),
+									)
+								),
+								'posts_per_page' => 5,
+								'post__not_in' => $posts_excluded
+								)); ?>
+							<div class="block-wrap">
+								<?php include(locate_template('templates/secondary-block.php')); ?>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -20,19 +71,5 @@
 				<?php $posts_excluded = get_option('ungrynerd_excludes'); ?>
 			</div>
 		</section>
-
-		<section id="multimedia" class="dark multimedia-home">
-			<div class="container">
-				<div class="row">
-					<?php include(locate_template('templates/home-multimedia.php')); ?>
-				</div>
-			</div>
-		</section>
-		<section id="latest" class="container">
-			<div class="row">
-				<?php include(locate_template('templates/home-latest.php')); ?>
-			</div>
-		</section>
 	</div>
-<?php endwhile; ?>
 <?php get_footer() ?>

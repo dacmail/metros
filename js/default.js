@@ -22,6 +22,7 @@
 			e.preventDefault();
 			e.stopPropagation();
 			$('.play').hide();
+			$('.play').parent().addClass('playing');
 			$('.play').parent().children('.wp-post-image').hide();
 			$('.play').parent().children('.video-wrap').show();
 		});

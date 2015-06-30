@@ -262,6 +262,23 @@ body {
 .big-featured.home {
     margin-top:-40px;
 }
+    .big-featured.home .title-wrap {
+        height: 262px;
+        color:#fff;
+        bottom:0px;
+        left: 0px;
+        position: absolute;
+        width: 100%;
+        background: url('images/gradient-v.png') repeat-x;
+    }
+    .big-featured.home .image-wrap.video .play {background-color: transparent;}
+        .big-featured.home .playing .title-wrap {
+            bottom: 30px;
+            background: transparent;
+        }
+        .big-featured.home .playing .post-title {
+            bottom: 0px;
+        }
     .big-featured.home .post-title {
         color:#fff;
         position: absolute;
@@ -476,7 +493,7 @@ body {
     border-radius: 0px;
     text-transform: uppercase;
     font-family: "Roboto Condensed";
-    padding:20px;
+    padding:15px 20px;
 }
     .btn-primary {
         color: #fff;
@@ -487,7 +504,9 @@ body {
         background-color: #FF434A;
         opacity: 0.8;
     }
-#comments {}
+#comments {
+    margin-top:40px;
+}
     #comments .comment {
         position: relative;
         
@@ -683,18 +702,22 @@ body {
 
     .slideshow-wrap .title-wrap  {
         position: absolute;
-        bottom: 0px;
-        left: 0px;
-        width: 100%;
+        bottom: 20px;
+        left: 20px;
+        display: inline;
+        background-color: #000;
+        padding:10px;
+        /*
         height: 50%;
         box-shadow: inset 0px -300px 160px -200px #000000;
-        padding:30px;
+        padding:30px;*/
     }
     .slideshow-wrap .post-title {
         font-size: 40px;
-        position: absolute;
+        /*position: absolute;
         bottom: 30px;
-        left: 30px;
+        left: 30px;*/
+        margin:0px;
     }
         .slideshow-wrap .post-title a {color:#FFFFFF;}
     .slideshow-wrap .slideshow-nav {
@@ -704,12 +727,13 @@ body {
         height: 100%;
     }
         .slideshow-wrap .slideshow-nav li {
-            padding:20px;
+            padding:30px;
             height: 33.3334%;
             display: table;
             background-color: rgb(57,135,205);
             width: 100%;
             font-size: 19px;
+            line-height: 21px;
             font-family: "Roboto Condensed";
             font-weight: bold;
         }
@@ -750,15 +774,20 @@ body {
             width: 50%;
             height: auto;
             display: block;
+            border:0px;
+            margin-bottom: 0px;
+        }
+        .secondary-cat-featured .image img {
+            width: 100%;
         }
         .secondary-cat-featured .title-wrap {
-            width: 60%;
-            left: 40%;
+            width: 65%;
+            left: 35%;
             top: 0px;
             position: absolute;
             height: 100%;
-            padding:20px 20px 20px 10%;
-            box-shadow: inset -600px 0px 117px -175px #000000;
+            padding:20px 20px 20px 15%;
+            background: url('images/gradient.png') top left repeat-y;
         }
         .secondary-cat-featured .post-title {
             display: table;
@@ -1002,7 +1031,7 @@ a img.aligncenter {
 .cat.elecciones {background-color:#F44A1C;}
 .cat.internacional {background-color:#3A88CE;}
 .cat.nacionalismo {background-color:#E0BC4B;}
-.cat.politica {background-color:#E58925#99C45B;}
+.cat.politica {background-color:#E58925;}
 .cat.sociedad {background-color:#9C7FC6;}
 .cat.sostenibilidad {background-color:#99C45B;}
 
@@ -1011,7 +1040,7 @@ a img.aligncenter {
 #header #secondary-menu .nav .menu-item.menu-elecciones:hover {border-color:#F44A1C;}
 #header #secondary-menu .nav .menu-item.menu-internacional:hover {border-color:#3A88CE;}
 #header #secondary-menu .nav .menu-item.menu-nacionalismo:hover {border-color:#E0BC4B;}
-#header #secondary-menu .nav .menu-item.menu-politica:hover {border-color:#E58925#99C45B;}
+#header #secondary-menu .nav .menu-item.menu-politica:hover {border-color:#E58925;}
 #header #secondary-menu .nav .menu-item.menu-sociedad:hover {border-color:#9C7FC6;}
 #header #secondary-menu .nav .menu-item.menu-sostenibilidad:hover {border-color:#99C45B;}
 
@@ -1020,7 +1049,7 @@ a img.aligncenter {
 .page-template-recursos .recurso.category-elecciones .image img {border-bottom: 5px solid #F44A1C;}
 .page-template-recursos .recurso.category-internacional .image img {border-bottom: 5px solid #3A88CE;}
 .page-template-recursos .recurso.category-nacionalismo .image img {border-bottom: 5px solid #E0BC4B;}
-.page-template-recursos .recurso.category-politica .image img {border-bottom: 5px solid #E58925#99C45B;}
+.page-template-recursos .recurso.category-politica .image img {border-bottom: 5px solid #E58925;}
 .page-template-recursos .recurso.category-sociedad .image img {border-bottom: 5px solid #9C7FC6;}
 .page-template-recursos .recurso.category-sostenibilidad .image img {border-bottom: 5px solid #99C45B;}
 
@@ -1029,7 +1058,7 @@ a img.aligncenter {
 .big-featured .image-wrap.category-elecciones {border-bottom: 5px solid #F44A1C;}
 .big-featured .image-wrap.category-internacional {border-bottom: 5px solid #3A88CE;}
 .big-featured .image-wrap.category-nacionalismo {border-bottom: 5px solid #E0BC4B;}
-.big-featured .image-wrap.category-politica {border-bottom: 5px solid #E58925#99C45B;}
+.big-featured .image-wrap.category-politica {border-bottom: 5px solid #E58925;}
 .big-featured .image-wrap.category-sociedad {border-bottom: 5px solid #9C7FC6;}
 .big-featured .image-wrap.category-sostenibilidad {border-bottom: 5px solid #99C45B;}
 
@@ -1038,12 +1067,91 @@ a img.aligncenter {
 #sidebar .analista.category-elecciones .post-title:before {background: #F44A1C;}
 #sidebar .analista.category-internacional .post-title:before {background: #3A88CE;}
 #sidebar .analista.category-nacionalismo .post-title:before {background: #E0BC4B;}
-#sidebar .analista.category-politica .post-title:before {background: #E58925#99C45B;}
+#sidebar .analista.category-politica .post-title:before {background: #E58925;}
 #sidebar .analista.category-sociedad .post-title:before {background: #9C7FC6;}
 #sidebar .analista.category-sostenibilidad .post-title:before {background: #99C45B;}
 
+.category-desigualdad #bar {background: #C17759;}
+.category-economia #bar {background: #5CB796;}
+.category-elecciones #bar {background: #F44A1C;}
+.category-internacional #bar {background: #3A88CE;}
+.category-nacionalismo #bar {background: #E0BC4B;}
+.category-politica #bar {background: #E58925;}
+.category-sociedad #bar {background: #9C7FC6;}
+.category-sostenibilidad #bar {background: #99C45B;}
 
-@media only screen and  (max-width : 1024px) {}
+.category-desigualdad .slideshow-wrap .title-wrap {background: rgba(193,119,89,0.9);}
+.category-economia .slideshow-wrap .title-wrap {background: rgba(92,183,150,0.9);}
+.category-elecciones .slideshow-wrap .title-wrap {background: rgba(244,74,28,0.9);}
+.category-internacional .slideshow-wrap .title-wrap {background: rgba(58,136,206,0.9);}
+.category-nacionalismo .slideshow-wrap .title-wrap {background: rgba(224,188,75,0.9);}
+.category-politica .slideshow-wrap .title-wrap {background: rgba(229,137,37,0.9);}
+.category-sociedad .slideshow-wrap .title-wrap {background: rgba(156,127,198,0.9);}
+.category-sostenibilidad .slideshow-wrap .title-wrap {background: rgba(153,196,91,0.9);}
+
+.category-desigualdad .slideshow-wrap .slideshow-nav li {background: rgb(193,119,89);}
+.category-economia .slideshow-wrap .slideshow-nav li {background: rgb(92,183,150);}
+.category-elecciones .slideshow-wrap .slideshow-nav li {background: rgb(244,74,28);}
+.category-internacional .slideshow-wrap .slideshow-nav li {background: rgb(58,136,206);}
+.category-nacionalismo .slideshow-wrap .slideshow-nav li {background: rgb(224,188,75);}
+.category-politica .slideshow-wrap .slideshow-nav li {background: rgb(229,137,37);}
+.category-sociedad .slideshow-wrap .slideshow-nav li {background: rgb(156,127,198);}
+.category-sostenibilidad .slideshow-wrap .slideshow-nav li {background: rgb(153,196,91);}
+
+.category-desigualdad .slideshow-wrap .slideshow-nav li:nth-child(2) {background: rgba(193,119,89,0.9);}
+.category-economia .slideshow-wrap .slideshow-nav li:nth-child(2) {background: rgba(92,183,150,0.9);}
+.category-elecciones .slideshow-wrap .slideshow-nav li:nth-child(2) {background: rgba(244,74,28,0.9);}
+.category-internacional .slideshow-wrap .slideshow-nav li:nth-child(2) {background: rgba(58,136,206,0.9);}
+.category-nacionalismo .slideshow-wrap .slideshow-nav li:nth-child(2) {background: rgba(224,188,75,0.9);}
+.category-politica .slideshow-wrap .slideshow-nav li:nth-child(2) {background: rgba(229,137,37,0.9);}
+.category-sociedad .slideshow-wrap .slideshow-nav li:nth-child(2) {background: rgba(156,127,198,0.9);}
+.category-sostenibilidad .slideshow-wrap .slideshow-nav li:nth-child(2) {background: rgba(153,196,91,0.9);}
+
+.category-desigualdad .slideshow-wrap .slideshow-nav li:nth-child(3) {background: rgba(193,119,89,0.8);}
+.category-economia .slideshow-wrap .slideshow-nav li:nth-child(3) {background: rgba(92,183,150,0.8);}
+.category-elecciones .slideshow-wrap .slideshow-nav li:nth-child(3) {background: rgba(244,74,28,0.8);}
+.category-internacional .slideshow-wrap .slideshow-nav li:nth-child(3) {background: rgba(58,136,206,0.8);}
+.category-nacionalismo .slideshow-wrap .slideshow-nav li:nth-child(3) {background: rgba(224,188,75,0.8);}
+.category-politica .slideshow-wrap .slideshow-nav li:nth-child(3) {background: rgba(229,137,37,0.8);}
+.category-sociedad .slideshow-wrap .slideshow-nav li:nth-child(3) {background: rgba(156,127,198,0.8);}
+.category-sostenibilidad .slideshow-wrap .slideshow-nav li:nth-child(3) {background: rgba(153,196,91,0.8);}
+
+
+
+@media only screen and  (max-width : 1200px) {}
+@media only screen and  (max-width : 991px) {
+    #header #main-menu .menu-item {
+        padding:0px 10px;
+    }
+    .block-title {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .block-title:before {
+        bottom: 0px;
+        height: 23px;
+    }
+    .multimedia-home .block-title, #latest .block-title {
+        margin-left: 25px;
+    }
+    #sidebar .dato {
+        margin-right: 0px;
+    }
+        #sidebar .dato .number {
+            font-size: 35px;
+            line-height: 25px;
+        }
+        #sidebar .dato .text {
+            font-size: 15px;
+            line-height: 15px;
+        }
+    .primary-home .post-title {
+        font-size: 19px;
+    }
+    .featured-secondary .post-title, .big-featured.home .post-title {
+        font-size: 35px;
+    }
+}
 @media only screen and  (max-width : 768px) {
     
 }

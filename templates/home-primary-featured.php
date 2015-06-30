@@ -10,11 +10,13 @@
 					<?php echo wp_oembed_get($video); ?>
 				</div>
 			<?php endif ?>
-			<h2 class="post-title">
-				<a href="<?php the_permalink() ?>" title="Enlace a <?php the_title_attribute(); ?>">
-					<?php the_title(); ?>
-				</a>
-			</h2>
+			<div class="title-wrap">
+				<h2 class="post-title">
+					<a href="<?php the_permalink() ?>" title="Enlace a <?php the_title_attribute(); ?>">
+						<?php the_title(); ?>
+					</a>
+				</h2>
+			</div>
 		</div>
 	</div>
 <?php endwhile; ?>
