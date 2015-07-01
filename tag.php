@@ -9,19 +9,11 @@
 						<?php echo term_description(); ?>
 					</div>
 					<div class="primary-home no-home">
-						<?php 
-						$block_posts = new WP_Query(array(
-							'tax_query' => array(
-								array(
-									'taxonomy' => $term->taxonomy,
-									'field'    => 'term_id',
-									'terms'    => array($term->term_id),
-								)
-							),
-							'posts_per_page' => 10,
-							'post__not_in' => $posts_excluded
-							)); ?>
-							<?php include(locate_template('templates/tag-block.php')); ?>
+						<?php $block_posts = $wp_query ?>
+						<?php include(locate_template('templates/tag-block.php')); ?>
+					</div>
+					<div class="pagination-wrap">
+						<?php ungrynerd_pagination(); ?>
 					</div>
 				</div>
 				<?php update_option('ungrynerd_excludes', $posts_excluded, '', 'yes'); ?>

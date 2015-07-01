@@ -11,6 +11,9 @@
 						<?php $block_posts = $wp_query; ?>
 						<?php include(locate_template('templates/list.php')); ?>
 					</div>
+					<div class="pagination-wrap">
+						<?php ungrynerd_pagination(); ?>
+					</div>
 				</div>
 				<?php get_sidebar('home') ?>
 			</div>
