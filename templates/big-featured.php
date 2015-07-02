@@ -1,7 +1,7 @@
 <?php while ($block_posts->have_posts()) : $block_posts->the_post(); ?>
 	<?php $posts_excluded[] = get_the_ID();  ?>
 	<?php $video = get_post_meta(get_the_ID(), '_ungrynerd_recurso_video', true); ?>
-	<div class="image-wrap <?php echo !empty($video) ? 'video' : 'chart' ?>">
+	<div <?php post_class('image-wrap ' . (!empty($video) ? 'video' : 'chart')); ?>>
 		<div class="container">
 			<?php the_post_thumbnail('featured-big'); ?>
 			<?php if (!empty($video)): ?>

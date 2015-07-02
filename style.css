@@ -373,6 +373,10 @@ body {
         padding-top:40px;
         border-top:1px solid #E5E5E5;
     }
+    .single-recurso .post-content {
+        padding:0px;
+        border:0px;
+    }
         .single .post-content .sidebar {}
             .single .post-content .sidebar .by, .by a {
                 color:#191919;
@@ -588,10 +592,21 @@ body {
             line-height: 40px;
             height: 40px;
             padding:0px 8px;
-            color:#B2B2B2;
+            color:#191919;
             font-family: "Roboto Condensed";
         }
-        
+        #searchform .wrapper .field::-webkit-input-placeholder { 
+            color: #b2b2b2;
+        }
+        #searchform .wrapper .field:-moz-placeholder { 
+            color: #b2b2b2;
+        }
+        #searchform .wrapper .field::-moz-placeholder { 
+            color: #b2b2b2;
+        }
+        #searchform .wrapper .field:-ms-input-placeholder { 
+            color: #b2b2b2;
+        }
     /* Tendencias */
     .widget_ungrynerd_list_tags .trends {
         list-style: none;
@@ -826,6 +841,18 @@ body {
         transform: translate(0, 0);
         content: "\f02c";
     }
+    body.author .tag-title:before {
+        content: "\f007";
+    }
+    body.search .tag-title:before {
+        content: "\f002";
+    }
+    body.author .tag-title:before {
+        content: "\f007";
+    }
+    body.date .tag-title:before {
+        content: "\f073";
+    }
 /* TAG Primary block */
     .primary-home.no-home .image {
         width: auto;
@@ -835,7 +862,7 @@ body {
 .big-featured {}
     .big-featured .image-wrap, .big-featured .recurso.image-wrap {
         padding-bottom:0px;
-        margin-bottom:40px;
+        margin-bottom:30px;
     }
     .big-featured .image-wrap .wp-post-image {
         width: 100%;
@@ -860,7 +887,8 @@ body {
     .big-featured .meta .date {
         font-family: "Roboto Condensed";
         font-weight: 300;
-        font-size: 15px;
+        font-size: 17px;
+        line-height: 32px;
         color:#B2B2B2;
     }
     .big-featured .meta .share {
@@ -886,7 +914,7 @@ body {
         position: absolute;
         top: 0px;
         left: 0px;
-        background: url('images/play.jpg') center center no-repeat rgba(0,0,0,0.5);
+        background: url('images/play.png') center center no-repeat rgba(0,0,0,0.5);
         background-size: 15% auto;
     }
 .recursos-bigger {
@@ -1030,18 +1058,34 @@ a img.aligncenter {
 .pagination {
     width: 100%;
     display: table;
-    border-bottom: 1px solid #E5E5E5;
     padding-bottom: 10px;
     margin-top:80px;
+    text-align: center;
 }
     .pagination>li {
         display: table-cell;
+        text-align: center;
+        position: relative;
     }
+        .pagination>li:after {
+            position: absolute;
+            content:"";
+            right: 0px;
+            top:12px;
+            height: 10px;
+            width: 2px;
+            background: #e5e5e5;
+        }
+        .pagination>li:last-child:after {
+            display: none;
+        }
         .pagination>li>a, .pagination>li>span {
             border:0px;
             color:#CCCCCC;
-            font-size: 20px;
+            font-size: 17px;
             font-weight: bold;
+            font-family: "Oswald";
+            width: 100%;
         }
         .pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
             background-color: transparent;
@@ -1078,6 +1122,15 @@ a img.aligncenter {
 .page-template-recursos .recurso.category-politica .image img {border-bottom: 5px solid #E58925;}
 .page-template-recursos .recurso.category-sociedad .image img {border-bottom: 5px solid #9C7FC6;}
 .page-template-recursos .recurso.category-sostenibilidad .image img {border-bottom: 5px solid #99C45B;}
+
+.single-recurso .recurso.category-desigualdad .image img {border-bottom: 5px solid #C17759;}
+.single-recurso .recurso.category-economia .image img {border-bottom: 5px solid #5CB796;}
+.single-recurso .recurso.category-elecciones .image img {border-bottom: 5px solid #F44A1C;}
+.single-recurso .recurso.category-internacional .image img {border-bottom: 5px solid #3A88CE;}
+.single-recurso .recurso.category-nacionalismo .image img {border-bottom: 5px solid #E0BC4B;}
+.single-recurso .recurso.category-politica .image img {border-bottom: 5px solid #E58925;}
+.single-recurso .recurso.category-sociedad .image img {border-bottom: 5px solid #9C7FC6;}
+.single-recurso .recurso.category-sostenibilidad .image img {border-bottom: 5px solid #99C45B;}
 
 .big-featured .image-wrap.category-desigualdad {border-bottom: 5px solid #C17759;}
 .big-featured .image-wrap.category-economia {border-bottom: 5px solid #5CB796;}

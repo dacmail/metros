@@ -1,7 +1,7 @@
 <?php 
 	//Opciones generales
 	add_option('ungrynerd_encuestas_icon', 'fa fa-bar-chart', '', 'yes');
-	add_option('ungrynerd_analisis_icon', 'fa fa-search', '', 'yes');
+	add_option('ungrynerd_analisis_icon', 'fa fa-flask', '', 'yes');
 	add_option('ungrynerd_recursos_icon', 'fa fa-pie-chart', '', 'yes');
 
 	// Content width

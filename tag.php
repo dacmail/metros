@@ -12,13 +12,15 @@
 						<?php $block_posts = $wp_query ?>
 						<?php include(locate_template('templates/tag-block.php')); ?>
 					</div>
-					<div class="pagination-wrap">
-						<?php ungrynerd_pagination(); ?>
-					</div>
 				</div>
 				<?php update_option('ungrynerd_excludes', $posts_excluded, '', 'yes'); ?>
 				<?php get_sidebar('home') ?>
 				<?php $posts_excluded = get_option('ungrynerd_excludes'); ?>
+				<div class="col-sm-9">
+					<div class="pagination-wrap">
+						<?php ungrynerd_pagination(); ?>
+					</div>
+				</div>
 			</div>
 		</section>
 	</div>
