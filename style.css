@@ -19,6 +19,7 @@ body, input, textarea {
 }
 
 /* Commons */
+.mobile-menu {display: none;}
 a {
     text-decoration:none;
     color: #FF434A;
@@ -425,6 +426,7 @@ body {
             border-bottom: 1px solid #E5E5E5;
             margin-bottom: 10px;
         }
+            .single #content .post-content .article p:first-child {margin-top:0px;}
             .post-content .article .tags {
                 color:#FF444B;
                 position: relative;
@@ -714,6 +716,7 @@ body {
     }
     .slideshow-wrap .image {
         border:1px solid #E5E5E5;
+        margin-bottom: 0px;
     }
 
     .slideshow-wrap .title-wrap  {
@@ -1265,5 +1268,133 @@ a img.aligncenter {
     }
 }
 @media only screen and  (max-width : 768px) {
-    
+    #header {
+        padding-bottom: 10px;
+    }
+    .logo-wrap {
+        float: left;
+        max-width: 80%;
+    }
+    .desktop-menu {
+        display: none;
+    }
+    .navbar-toggle .icon-bar {
+        background: #000;
+    }
+    .mobile-menu {
+        width: 100%;
+        position: absolute;
+        background-color: #fff;
+        z-index: 99999;
+        top: 76px;
+    }
+    .big-featured.home .post-title {
+        font-size: 20px;
+    }
+    .big-featured.home .title-wrap  {
+        height: auto;
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+        .big-featured.home .post-title {
+            font-size: 20px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+        .big-featured .image-wrap.video .play {
+            background-size: 16% auto;
+            background-position: center 50px;
+        }
+    .sidebar-separator {
+        border:0px;
+        padding-right: 15px;
+    }
+    .featured-secondary .post-title {font-size: 30px;}
+    .block-title {
+        margin-left: 20px;
+    }
+    .secondary-home {
+        padding-left: 15px;
+    }
+    #sidebar {
+        padding-left: 15px;
+    }
+    #sidebar .analista .avatar {
+        margin-left: 0px;
+    }
+    #searchform .wrapper {
+        margin-left: 0px;
+    }
+    #sidebar .dato {
+        margin-left: 0px;
+    }
+    .widget_ungrynerd_list_tags .trends {
+        margin-left: 30px;
+    }
+    #footer {
+        text-align: center;
+    }
+    #footer #secondary-menu .menu-item {
+        width: 100%;
+    }
+    .h2, h2 {
+        font-size: 20px;
+    }
+    .single .post-content {
+        padding-top: 0px;
+    }
+    .single .post-title {
+        font-size: 30px;
+    }
+    .single .meta .date {
+        margin-bottom: 10px;
+    }
+    .single .meta .share {
+        text-align: left;
+    }
+    .related-posts img {
+        display: none;
+    }
+    .comments-title {
+        font-size: 30px;
+    }
+    .slideshow-wrap .col-sm-3 {
+        display: none;
+    }
+    .slideshow-wrap .col-sm-9 {
+        padding-right: 15px;
+    }
+    .slideshow-wrap .post-title {
+        font-size: 16px;
+    }
+    .slideshow-wrap .title-wrap {
+        max-width: 80%;
+    }
+    .secondary-cat-featured article.post {
+        margin:0px 15px;
+    }
+    .secondary-cat-featured .image {
+        width: 100%;
+    }
+    .secondary-cat-featured .title-wrap {
+        position: relative;
+        width: 100%;
+        left: 0px;
+        background: #000;
+    }
+    .tag-title {
+        margin-left: 30px;
+        font-size: 20px;
+    }
+    .tag-title:before {
+        font-size: 20px;
+        top:4px;
+        left: -30px;
+    }
+    .primary-home.no-home .image {
+        width: 100px;
+        height: 100px;
+    }
 }

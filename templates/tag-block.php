@@ -4,7 +4,7 @@
 		<?php if ($block_posts->current_post==0): ?>
 			<?php if (has_post_thumbnail()) : ?><div class="image"><?php the_post_thumbnail('cat-thumb'); ?></div><?php endif; ?>
 		<?php else : ?>
-			<?php if (has_post_thumbnail()) : ?><div class="image"><?php the_post_thumbnail('thumbnail'); ?></div><?php endif; ?>
+			<?php if (has_post_thumbnail()) : ?><div class="image"><?php the_post_thumbnail('square'); ?></div><?php endif; ?>
 		<?php endif ?>
 		<?php echo ungrynerd_cat_links(get_the_ID()); ?>
 		<h2 class="post-title">

@@ -1,7 +1,8 @@
 (function($) {
 	$(document).ready(function() {
 		// equals home blocks
-		$('.primary-home .block-wrap').css({'min-height': $('.secondary-home .block-wrap').css('height')});
+		if ($(window).width()>990)
+			$('.primary-home .block-wrap').css({'min-height': $('.secondary-home .block-wrap').css('height')});
 
 		//Slideshow
 		var slideLoaded = imagesLoaded($('.slideshow'));

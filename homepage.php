@@ -31,15 +31,11 @@
 
 		<section id="multimedia" class="dark multimedia-home">
 			<div class="container">
-				<div class="row">
-					<?php include(locate_template('templates/home-multimedia.php')); ?>
-				</div>
+				<?php include(locate_template('templates/home-multimedia.php')); ?>
 			</div>
 		</section>
 		<section id="latest" class="container">
-			<div class="row">
-				<?php include(locate_template('templates/home-latest.php')); ?>
-			</div>
+			<?php include(locate_template('templates/home-latest.php')); ?>
 		</section>
 	</div>
 <?php endwhile; ?>

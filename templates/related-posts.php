@@ -17,7 +17,7 @@ if ($tags) {
     <div class="row">
     <?php while( $my_query->have_posts() ) : $my_query->the_post(); ?>
         <article <?php post_class('col-sm-3'); ?> id="featured-<?php the_ID(); ?>">
-            <?php the_post_thumbnail('medium'); ?>
+            <?php the_post_thumbnail('cat-med'); ?>
             <?php echo ungrynerd_cat_links(get_the_ID()); ?>
             <h2 class="post-title">
                 <a href="<?php the_permalink() ?>" title="Enlace a <?php the_title_attribute(); ?>">

@@ -20,12 +20,7 @@
 				</div>
 				<div class="post-content">
 					<div class=" row">
-						<div class="col-sm-3 sidebar">
-							<?php echo get_avatar( get_the_author_meta( 'ID' ), 80 ); ?>
-							<h3 class="by"><span>Escrito por </span><?php the_author_posts_link(); ?></h3>
-							<?php echo ungrynerd_cat_links(get_the_ID(), true); ?>
-						</div>
-						<div class="col-sm-9">
+						<div class="col-sm-9 pull-right">
 							<div class="article">
 								<?php the_content(); ?>
 								<div class="tags">
@@ -33,6 +28,12 @@
 								</div>
 							</div>
 							<div class="text-right share bottom"><div class="addthis_sharing_toolbox"></div></div>
+						</div>
+
+						<div class="col-sm-3 sidebar pull-left">
+							<?php echo get_avatar( get_the_author_meta( 'ID' ), 80 ); ?>
+							<h3 class="by"><span>Escrito por </span><?php the_author_posts_link(); ?></h3>
+							<?php echo ungrynerd_cat_links(get_the_ID(), true); ?>
 						</div>
 					</div>
 				</div>
