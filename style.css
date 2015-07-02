@@ -19,7 +19,10 @@ body, input, textarea {
 }
 
 /* Commons */
-.mobile-menu {display: none;}
+.navbar-collapse.collapse.mobile-menu {display: none !important;}
+.navbar-collapse.in.collapse.mobile-menu {
+    display: block !important;
+}
 a {
     text-decoration:none;
     color: #FF434A;
