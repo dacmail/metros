@@ -43,6 +43,7 @@
 	// Soporte para miniaturas y definición de tamaños
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'slideshow', 900, 560, false );
+	add_image_size( 'carousel', 900, 560, true );
 	add_image_size( 'featured-secondary', 800, 800, false );
 	add_image_size( 'dato', 400, 290, true );
 	add_image_size( 'square', 400, 400, true );

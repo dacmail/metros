@@ -16,7 +16,7 @@
 									'meta_key' => '_ungrynerd_cat_featured', 
 									'meta_value' => 1, 
 									'posts_per_page' => 3)); ?>
-				<?php if ($featured->have_posts()): ?>
+				<?php if ($featured->have_posts() && $featured->post_count==3): ?>
 					<div class="col-sm-12 slideshow-wrap">
 						<?php $posts_excluded = array(); ?>
 

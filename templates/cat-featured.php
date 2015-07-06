@@ -4,7 +4,7 @@
 		<?php while ($featured->have_posts()) : $featured->the_post(); ?>
 			<?php $posts_excluded[] = get_the_ID();  ?>
 			<article <?php post_class('slide-item'); ?> data-hash="<?php the_slug(); ?>">
-				<div class="image"><?php the_post_thumbnail('slideshow', array('class' => 'img-responsive')); ?></div>
+				<div class="image"><?php the_post_thumbnail('carousel', array('class' => 'img-responsive')); ?></div>
 				<div class="title-wrap">
 					<h2 class="post-title">
 						<a href="<?php the_permalink() ?>" title="Enlace a <?php the_title_attribute(); ?>">
