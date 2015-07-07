@@ -31,8 +31,20 @@
 						</div>
 
 						<div class="col-sm-3 sidebar pull-left">
-							<?php echo get_avatar( get_the_author_meta( 'ID' ), 80 ); ?>
-							<h3 class="by"><span>Escrito por </span><?php the_author_posts_link(); ?></h3>
+							<?php $authors = get_coauthors();?>
+							<?php if (count($authors)<2): ?>
+								<?php echo get_avatar( get_the_author_meta( 'ID' ), 80 ); ?>
+							<?php endif ?>
+							<h3 class="by">
+								<span>Escrito por </span>
+								<?php 
+								if ( function_exists( 'coauthors_posts_links' ) ) {
+								    coauthors_posts_links(' ', ' ');
+								} else {
+								    the_author_posts_link();
+								}
+								?>
+							</h3>
 							<?php echo ungrynerd_cat_links(get_the_ID(), true); ?>
 						</div>
 					</div>
@@ -44,13 +56,6 @@
 	<div class="related-posts">
 		<div class="container">
 			<?php include(locate_template('templates/related-posts.php')); ?>
-		</div>
-	</div>
-	<div class="comments-wrap container">
-		<div class="row">
-			<div class="col-sm-9 col-sm-offset-3">
-				<?php comments_template('/templates/comments.php'); ?>
-			</div>
 		</div>
 	</div>
 </div>

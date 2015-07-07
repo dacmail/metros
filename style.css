@@ -390,6 +390,11 @@ body {
                 margin-top: 10px;
                 margin-bottom: 30px;
             }
+                .single .post-content .sidebar .by a {
+                    display: block;
+                    margin-bottom: 2px;
+                    margin-top: 2px;
+                }
                 .single .post-content .sidebar .by span {
                     font-family: "Roboto Condensed";
                     font-size: 23px;
