@@ -52,3 +52,16 @@
 
 	// Oculta la barra de administración
 	add_filter( "show_admin_bar", "__return_false" );
+
+
+	add_filter('get_avatar', 'ungrynerd_get_avatar', 10, 5);
+	function ungrynerd_get_avatar($avatar, $id_or_email, $size, $default, $alt){
+		$imgpath = get_template_directory_uri() . "/images/avatar/" . $id_or_email . '.jpg';
+		$file_headers = @get_headers($imgpath);
+		if ($file_headers[0] == 'HTTP/1.1 200 OK') {
+			$image = "<img src='".$imgpath."' alt='".$alt."' height='".$size."' width='".$size."' class='avatar avatar-".$size." photo' />";
+		} else {
+			$image = $avatar;
+		}
+		return $image;
+	}
