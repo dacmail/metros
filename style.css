@@ -869,6 +869,10 @@ body {
         width: auto;
         height: auto;
     }
+    .archive .attachment-square {
+        width: 150px;
+        height: auto;
+    }
 /* Recursos */
 .big-featured {}
     .big-featured .image-wrap, .big-featured .recurso.image-wrap {
