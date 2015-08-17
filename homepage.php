@@ -20,6 +20,7 @@
 						</div>
 						<div class="col-sm-5 secondary-home" id="block_1_home">
 							<?php include(locate_template('templates/home-secondary-block.php')); ?>
+							<?php include(locate_template('templates/home-secondary-block-extra.php')); ?>
 						</div>
 					</div>
 				</div>

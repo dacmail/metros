@@ -63,8 +63,8 @@
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => null,
-            'taxonomies' => array('category', 'post_tag'),
-            'supports'           => array( 'title', 'custom-fields','editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+            'taxonomies' => array(),
+            'supports'           => array( 'title', 'custom-fields')
         );
 
         //register_post_type( 'analisis', $args );

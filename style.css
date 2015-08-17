@@ -80,6 +80,7 @@ body {
         overflow: hidden;
         font-weight: 400;
     }
+.secondary-home .more {margin-bottom: 30px;}
 .more a {
     font-family: "Roboto Condensed";
     color:#FF444B;
@@ -241,6 +242,7 @@ body {
                 text-decoration: none;
                 opacity: 0.8;
             }
+        body.category .category-metas .cat {display: none;}
     .author-meta {
         color:#191919;
         font-family: "Roboto Condensed";
@@ -306,7 +308,6 @@ body {
     .primary-home {padding-right: 0px;}
         .primary-home .block-wrap {
             padding-right: 30px;
-            border-right:1px solid #E5E5E5;
         }
         .primary-home .post {
             padding-bottom:5px;

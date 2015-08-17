@@ -54,7 +54,6 @@
 					$return .= '<a class="cat ' . $cat->slug . '" href="' . get_term_link($cat->slug, 'category') . '">' . $cat->name . '</a>';
 				}
 			}
-			
 		}
 		$return .= '</div>';
 		return $return;

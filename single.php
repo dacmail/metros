@@ -4,9 +4,11 @@
 		<div class="row">
 			<?php while (have_posts()) : the_post(); ?>
 			<article id="content" <?php post_class('col-md-12'); ?>>
-				<?php if (has_post_thumbnail()): ?>
+				<?php $featured_image = get_post_meta(get_the_ID(), '_ungrynerd_image_featured', true); ?>
+				<?php if (has_post_thumbnail() && $featured_image): ?>
 					<div class="featured-img">
 						<?php the_post_thumbnail('featured-big', array('class' => 'img-responsive')); ?>
+						<p class="caption"><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></p>
 					</div>
 				<?php endif ?>
 				<h1 class="post-title"><?php the_title(); ?></h1>

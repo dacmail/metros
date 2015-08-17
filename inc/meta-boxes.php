@@ -58,6 +58,23 @@ $meta_boxes[] = array(
     );
 
 $meta_boxes[] = array(
+        'id'         => 'cat_options',
+        'title'      =>  __('Imagen destacada'),
+        'pages'      => array('post' ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields'     => array(
+            array(
+	                'name' =>  __('Mostrar imagen destacada en grande encima del titular'),
+	                'id' => $prefix . 'image_featured',
+	                'type' => 'checkbox',
+	                'std' => 1,
+	            ),
+        ),
+    );
+
+$meta_boxes[] = array(
         'id'         => 'dato_options',
         'title'      =>  __('El dato'),
         'pages'      => array('dato' ), // Post type
@@ -172,6 +189,33 @@ $meta_boxes[] = array(
 			array(
 				'name'    => __( 'Número artículos', 'ungrynerd' ),
 				'id'      => $prefix . 'block_2_count',
+				'type'    => 'number',
+				'min'	  => 3,
+			)
+        ),
+    );
+
+$meta_boxes[] = array(
+        'id'         => 'home_options3',
+        'title'      =>  __('Opciones de portada: Bloque 3'),
+        'pages'      => array('page'), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields'     => array(
+			array(
+				'name'    => __( 'Categoría', 'ungrynerd' ),
+				'id'      => $prefix . 'block_3_tax',
+				'type'    => 'taxonomy_advanced',
+				'options' => array(
+					'taxonomy' => 'category',
+					'taxonomies' => array('category','tipo'),
+					'type'     => 'select_advanced',
+				),
+			),
+			array(
+				'name'    => __( 'Número artículos', 'ungrynerd' ),
+				'id'      => $prefix . 'block_3_count',
 				'type'    => 'number',
 				'min'	  => 3,
 			)
