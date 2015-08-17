@@ -9,7 +9,7 @@
 		slideLoaded.on('done', configureSlide);
 		$elem = $('.slideshow').owlCarousel({
 			items:1,
-			loop:true,
+			loop:false,
 			center:true,
 			margin:10,
 			URLhashListener:true,
