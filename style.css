@@ -1309,12 +1309,16 @@ a img.aligncenter {
         position: relative;
         top: 0px;
         left: 0px;
+        background: none;
     }
         .big-featured.home .post-title {
-            font-size: 20px;
+            font-size: 30px;
             position: relative;
             top: 0px;
             left: 0px;
+        }
+        .big-featured.home .post-title a {
+            color:#191919;
         }
         .big-featured .image-wrap.video .play {
             background-size: 16% auto;
