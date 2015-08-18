@@ -2,7 +2,7 @@
 	$limit = get_post_meta(get_the_ID(), '_ungrynerd_block_1_count', true);
 	$block_posts = new WP_Query(array(
 				'post_type' => array('recurso'),
-				'posts_per_page' => $limit,
+				'posts_per_page' => 3,
 				'post__not_in' => $posts_excluded
 				)); ?>
 <h2 class="block-title <?php echo $term->slug ?>">Recursos</h2>
