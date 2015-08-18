@@ -1,5 +1,4 @@
 <?php 
-	$limit = get_post_meta(get_the_ID(), '_ungrynerd_block_1_count', true);
 	$block_posts = new WP_Query(array(
 				'post_type' => array('recurso'),
 				'posts_per_page' => 3,
