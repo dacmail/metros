@@ -1,9 +1,11 @@
 <?php /* Template Name: Home */ ?>
 <?php get_header() ?>
 <?php while (have_posts()) : the_post(); ?>
+	<?php $posts_excluded = array(); ?>
 	<div id="container" class="clearfix">
 		<?php $primary = new WP_Query(array('meta_key' => '_ungrynerd_featured', 'meta_value' => 1, 'post_type'=> array('post','recurso'), 'posts_per_page' => 1)); ?>
 		<?php if ($primary->have_posts()): ?>
+			<?php $posts_excluded[] = get_the_ID();  ?>
 			<section class="big-featured home">
 				<?php include(locate_template('templates/home-primary-featured.php')); ?>
 			</section>
@@ -12,7 +14,6 @@
 		<section class="container" id="main-home-content">
 			<div class="row">
 				<div class="col-sm-9 sidebar-separator">
-					<?php $posts_excluded = array(); ?>
 					<?php include(locate_template('templates/home-secondary-featured.php')); ?>
 					<div class="row">
 						<div class="col-sm-7 primary-home" id="block_1_home">
