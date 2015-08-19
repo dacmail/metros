@@ -113,7 +113,7 @@ class Ungrynerd_Analistas extends WP_Widget {
         global $post;
         wp_reset_postdata();
         $query = new WP_Query(array(
-                    'posts_per_page'         => $limit,
+                    'posts_per_page'         => $limit*6,
                     'post__not_in' => $posts_excluded,
                     'tax_query' => array(
                         array(
@@ -124,22 +124,27 @@ class Ungrynerd_Analistas extends WP_Widget {
                     )
                 ));
         ?>
+        <?php $authors = array(); ?>
         <?php while ($query->have_posts()) : $query->the_post(); ?>
-            <?php 
-                setup_postdata($post);
-                $posts_excluded[] = get_the_ID();  
-            ?>
-            <article <?php post_class('analista') ?>>
-                <div class="wrap-info clearfix">
-                    <?php echo get_avatar( $post->post_author, 80 ); ?>
-                    <a href="<?php echo get_author_posts_url($post->post_author); ?>"><?php echo get_the_author_meta('display_name',$post->post_author); ?></a>
-                </div>
-                <h2 class="post-title <?php echo ungrynerd_cat_slug(get_the_ID()) ?>">
-                    <a href="<?php the_permalink() ?>" title="Enlace a <?php the_title_attribute(); ?>">
-                        <?php the_title(); ?>
-                    </a>
-                </h2>
-            </article>
+            <?php if (!in_array($post->post_author, $authors)): ?>
+                <?php 
+                    setup_postdata($post);
+                    $posts_excluded[] = get_the_ID();
+                    $authors[] = $post->post_author;
+                ?>
+                <?php if (count($authors)>$limit) :  break; endif ?>
+                <article <?php post_class('analista') ?>>
+                    <div class="wrap-info clearfix">
+                        <?php echo get_avatar( $post->post_author, 80 ); ?>
+                        <a href="<?php echo get_author_posts_url($post->post_author); ?>"><?php echo get_the_author_meta('display_name',$post->post_author); ?></a>
+                    </div>
+                    <h2 class="post-title <?php echo ungrynerd_cat_slug(get_the_ID()) ?>">
+                        <a href="<?php the_permalink() ?>" title="Enlace a <?php the_title_attribute(); ?>">
+                            <?php the_title(); ?>
+                        </a>
+                    </h2>
+                </article>
+            <?php endif ?>
         <?php endwhile; ?>
         <?php
         update_option('ungrynerd_excludes', $posts_excluded, '', 'yes');
@@ -193,7 +198,7 @@ class Ungrynerd_El_Dato extends WP_Widget {
 
         echo $args['before_widget'];
         if ( $title ) {
-            echo $args['before_title'] . $title . $args['after_title'];
+            echo $args['before_title'] . '<a href="' . get_permalink(2773) . '">' . $title  . '</a>' . $args['after_title'];
         }
 
         //Código para mostrar en el frontend

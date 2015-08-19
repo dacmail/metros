@@ -10,7 +10,7 @@
 										'posts_per_page' => 1)); ?>
 <?php if ($featured->have_posts()) : ?>
 	<div class="secondary-cat-featured">
-		<div class="row">
+		<div class="clearfix">
 			<?php while ($featured->have_posts()) : $featured->the_post(); ?>
 				<?php $posts_excluded[] = get_the_ID();  ?>
 				<article <?php post_class(); ?>>

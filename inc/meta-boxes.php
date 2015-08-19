@@ -58,7 +58,7 @@ $meta_boxes[] = array(
     );
 
 $meta_boxes[] = array(
-        'id'         => 'cat_options',
+        'id'         => 'thumb_options',
         'title'      =>  __('Imagen destacada'),
         'pages'      => array('post' ), // Post type
         'context'    => 'normal',

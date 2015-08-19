@@ -69,6 +69,16 @@ body {
     font-weight: 700;
     margin-bottom:35px;
 }
+    .block-title a {
+        color:inherit;
+        -webkit-transition: opacity 0.3s linear;
+        -o-transition: opacity 0.3s linear;
+        transition: opacity 0.3s linear;
+    }
+    .block-title a:hover {
+        text-decoration: none;
+        opacity: 0.8;
+    }
     .block-title.c18-climasocial {color:#3987CD;}
     .block-title:before {
         left: -35px;
@@ -356,6 +366,11 @@ body {
         .single .featured-img img {
             width: 100%;
         }
+        .single #content .featured-img .caption {
+            margin:0px;
+            text-align: right;
+            font-size: 13px;
+        }
     .single .post-title {
         font-size: 60px;
         color:#191919;
@@ -381,6 +396,12 @@ body {
     .single-recurso .post-content {
         padding:0px;
         border:0px;
+    }
+    .post-content h2 {
+        font-size: 20px;
+        color:#191919;
+        font-weight: bold;
+        font-family: "Roboto";
     }
         .single .post-content .sidebar {}
             .single .post-content .sidebar .by, .by a {
@@ -682,13 +703,15 @@ body {
         #sidebar .analista .post-title.c18-climasocial:before {background-color: #3987CD;}
 
     /* EL dato */
-    #sidebar .dato {
+    .dato {
         position: relative;
         display: block;
-        margin-left: -30px;
-        margin-right: -30px;
     }
-        #sidebar .dato .text {
+        #sidebar .dato {
+            margin-left: -30px;
+            margin-right: -30px;
+        }
+        .dato .text {
             position: absolute;
             font-family: "Roboto Condensed";
             font-weight: bold;
@@ -696,8 +719,9 @@ body {
             color:#fff;
             bottom:15px;
             left: 15px;
+            width: 90%;
         }
-        #sidebar .dato .number {
+        .dato .number {
             position: absolute;
             font-size: 75px;
             color:#99C45A;
@@ -707,7 +731,7 @@ body {
             font-family: "Oswald";
             font-weight: bold;
         }
-        #sidebar .dato .attachment-dato {}
+        .dato .attachment-dato {}
 
 /* SECCIÓN */
 .slideshow-wrap {
@@ -799,7 +823,7 @@ body {
         position: relative;
     }
         .secondary-cat-featured .image {
-            width: 50%;
+            width: 61%;
             height: auto;
             display: block;
             border:0px;
