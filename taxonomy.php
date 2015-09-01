@@ -3,9 +3,7 @@
 	<div id="container" class="clearfix">
 		<section class="container" id="main-home-content">
 			<div class="row">
-				<div class="col-sm-12">
-					<h1 class="block-title main"><?php single_term_title(); ?></h1>
-				</div>
+				
 				<?php $featured = new WP_Query(array('tax_query' => array(
 										array(
 											'taxonomy' => $term->taxonomy,
@@ -17,6 +15,9 @@
 									'meta_value' => 1, 
 									'posts_per_page' => 3)); ?>
 				<?php if ($featured->have_posts() && $featured->post_count==3): ?>
+					<div class="col-sm-12">
+						<h1 class="block-title main"><?php single_term_title(); ?></h1>
+					</div>
 					<div class="col-sm-12 slideshow-wrap">
 						<?php $posts_excluded = array(); ?>
 
@@ -24,6 +25,9 @@
 					</div>
 				<?php endif ?>
 				<div class="col-sm-9 sidebar-separator">
+					<?php if (!$featured->have_posts() || $featured->post_count<3): ?>
+						<h1 class="block-title main"><?php single_term_title(); ?></h1>
+					<?php endif; ?>
 					<div class="two-columns-block">
 						<div class="row">
 							<?php 
