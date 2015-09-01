@@ -131,12 +131,18 @@ class Ungrynerd_Analistas extends WP_Widget {
                     setup_postdata($post);
                     $posts_excluded[] = get_the_ID();
                     $authors[] = $post->post_author;
+                    $coauthors = get_coauthors();
                 ?>
                 <?php if (count($authors)>$limit) :  break; endif ?>
                 <article <?php post_class('analista') ?>>
                     <div class="wrap-info clearfix">
                         <?php echo get_avatar( $post->post_author, 80 ); ?>
-                        <a href="<?php echo get_author_posts_url($post->post_author); ?>"><?php echo get_the_author_meta('display_name',$post->post_author); ?></a>
+                        <a href="<?php echo get_author_posts_url($post->post_author); ?>"><?php echo get_the_author_meta('display_name',$post->post_author); ?>
+                            <?php if (count($coauthors)>1): ?>
+                            , ...
+                            <?php endif ?>
+                        </a>
+
                     </div>
                     <h2 class="post-title <?php echo ungrynerd_cat_slug(get_the_ID()) ?>">
                         <a href="<?php the_permalink() ?>" title="Enlace a <?php the_title_attribute(); ?>">
