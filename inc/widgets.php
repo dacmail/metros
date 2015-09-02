@@ -137,9 +137,9 @@ class Ungrynerd_Analistas extends WP_Widget {
                 <article <?php post_class('analista') ?>>
                     <div class="wrap-info clearfix">
                         <?php echo get_avatar( $post->post_author, 80 ); ?>
-                        <a href="<?php echo get_author_posts_url($post->post_author); ?>"><?php echo get_the_author_meta('display_name',$post->post_author); ?>
+                        <a class="<?php echo (count($coauthors)>1) ? 'co' : ''; ?>" href="<?php echo get_author_posts_url($post->post_author); ?>"><?php echo get_the_author_meta('display_name',$post->post_author); ?>
                             <?php if (count($coauthors)>1): ?>
-                            , ...
+                            <span class="points-wrap">, <span class="points">...</span></span>
                             <?php endif ?>
                         </a>
 

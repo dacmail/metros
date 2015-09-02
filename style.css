@@ -686,6 +686,14 @@ body {
             margin-top: 30px;
             max-width: 70px;
         }
+            #sidebar .analista .wrap-info a.co {
+                margin-top:0px;
+            }
+            #sidebar .analista .wrap-info a.co .points {
+                font-size: 50px;
+                display: block;
+                line-height: 0px;
+            }
         #sidebar .analista .post-title {
             font-size: 19px;
             position: relative;

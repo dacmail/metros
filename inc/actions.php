@@ -1,4 +1,5 @@
 <?php
+
 	// Add category slug css class to menu items
 	function wpa_category_nav_class( $classes, $item ){
 	    if( 'category' == $item->object ){
@@ -11,12 +12,12 @@
 
 	//Enqueue scripts and styles
 	function ungrynerd_scripts() {
-		wp_enqueue_style('fontawesome-style', get_template_directory_uri() . '/css/font-awesome.min.css');
-		wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
-		wp_enqueue_style('carousel-style', get_template_directory_uri() . '/css/owl.carousel.css');
-		wp_enqueue_style('ungrynerd-style', get_stylesheet_uri() );
-
 		if( !is_admin()){
+			wp_enqueue_style('fontawesome-style', get_template_directory_uri() . '/css/font-awesome.min.css');
+			wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
+			wp_enqueue_style('carousel-style', get_template_directory_uri() . '/css/owl.carousel.css');
+			wp_enqueue_style('ungrynerd-style', get_stylesheet_uri() );
+
 			wp_deregister_script('jquery');
 
 			wp_enqueue_script('jquery','/wp-includes/js/jquery/jquery.js','','',true);
@@ -55,13 +56,18 @@
 
 
 	add_filter('get_avatar', 'ungrynerd_get_avatar', 10, 5);
-	function ungrynerd_get_avatar($avatar, $id_or_email, $size, $default, $alt){
-		$imgpath = get_template_directory_uri() . "/images/avatar/" . $id_or_email . '.jpg';
-		$file_headers = @get_headers($imgpath);
-		if ($file_headers[0] == 'HTTP/1.1 200 OK') {
-			$image = "<img src='".$imgpath."' alt='".$alt."' height='".$size."' width='".$size."' class='avatar avatar-".$size." photo' />";
-		} else {
+	function ungrynerd_get_avatar($avatar, $id_or_email, $size, $default, $alt) {
+		if (is_admin()) {
 			$image = $avatar;
+		} else {
+			$imgpath = get_template_directory() . "/images/avatar/" . $id_or_email . '.jpg';
+			$exists = file_exists($imgpath);
+			if ($exists) {
+				$imgpath = get_template_directory_uri() . "/images/avatar/" . $id_or_email . '.jpg';
+				$image = "<img src='".$imgpath."' alt='".$alt."' height='".$size."' width='".$size."' class='avatar avatar-".$size." photo' />";
+			} else {
+				$image = $avatar;
+			}
 		}
 		return $image;
 	}
