@@ -693,7 +693,9 @@ body {
                 font-size: 50px;
                 display: block;
                 line-height: 0px;
+                margin-top: -5px;
             }
+            #sidebar .analista .wrap-info a.co:hover .points {text-decoration: none;}
         #sidebar .analista .post-title {
             font-size: 19px;
             position: relative;
