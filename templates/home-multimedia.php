@@ -18,5 +18,5 @@
 	</article>
 <?php endwhile; ?>
 </div>
-<p class="more"><a href="#">Ver más recursos</a></p>
+<p class="more"><a href="<?php echo get_permalink(1647); ?>">Ver más recursos</a></p>
 <?php wp_reset_query(); ?>

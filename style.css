@@ -1010,6 +1010,7 @@ body {
     #footer .menu-item a {
         padding:0px 0px;
     }
+    #footer .menu-item.menu-item-2838 {font-weight: bold;}
     #footer .menu-item a:hover {
         background-color: transparent;
         text-decoration: underline;
