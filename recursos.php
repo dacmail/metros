@@ -8,16 +8,6 @@
 				</div>
 			</div>
 		</div>
-
-		<section class="big-featured">
-			<?php 
-			$block_posts = new WP_Query(array(
-				'post_type' => array('recurso'),
-				'posts_per_page' => 1,
-				'post__not_in' => $posts_excluded
-				)); ?>
-			<?php include(locate_template('templates/big-featured.php')); ?>
-		</section>
 		<section class="container">
 			<div class="row">
 				<div class="col-sm-12">
