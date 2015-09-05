@@ -304,6 +304,15 @@ body {
         padding-right: 30px;
     }
         .big-featured.home .post-title a {color:#fff;}
+    .big-featured.home .author-meta {
+        position: absolute;
+        position: absolute;
+        bottom: 15px;
+        left: 40px;
+        color: #fff;
+    }
+        .big-featured.home .author-meta a {color:#fff;}
+        .big-featured.home .author-meta a:before {background-color: #fff}
 /* Secondary Featured */
     .featured-secondary {
         margin-bottom: 20px;

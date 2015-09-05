@@ -16,6 +16,7 @@
 						<?php the_title(); ?>
 					</a>
 				</h2>
+				<p class="author-meta"><?php the_author_posts_link(); ?></p>
 			</div>
 		</div>
 	</div>
