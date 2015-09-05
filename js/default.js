@@ -66,7 +66,7 @@
       percentTime = 0;
       isPause = false;
       //run interval every 0.01 second
-      tick = setInterval(interval, 20);
+      tick = setInterval(interval, 5);
     };
  
     function interval() {
