@@ -716,10 +716,12 @@ body {
     .dato {
         position: relative;
         display: block;
+        margin-bottom:30px;
     }
         #sidebar .dato {
             margin-left: -30px;
             margin-right: -30px;
+            margin-bottom:0px;
         }
         .dato .text {
             position: absolute;
