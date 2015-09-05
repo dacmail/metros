@@ -321,7 +321,10 @@ body {
             text-align: center;
             margin-bottom:10px;
         }
-        .featured-secondary .post-title {font-size: 50px;}
+        .featured-secondary .post-title {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
 
 /* Home primary block */
     .primary-home {padding-right: 0px;}
@@ -1282,14 +1285,6 @@ a img.aligncenter {
     #sidebar .dato {
         margin-right: 0px;
     }
-        #sidebar .dato .number {
-            font-size: 35px;
-            line-height: 25px;
-        }
-        #sidebar .dato .text {
-            font-size: 15px;
-            line-height: 15px;
-        }
     #sidebar .analista .avatar {
         width: 30px;
         margin-left: -50px;
@@ -1460,4 +1455,5 @@ a img.aligncenter {
         width: 100px;
         height: 100px;
     }
+    #sidebar .analista .wrap-info a.co .points {margin-bottom:20px;}
 }
