@@ -136,7 +136,7 @@ body {
     #header #main-menu .menu-item {
         padding:0px 30px;
         line-height: 40px;
-        color:#999999;
+        color:#777;
         font-family: "Roboto Condensed";
         font-weight: 300;
     }
@@ -162,7 +162,7 @@ body {
         display: inline-block;
         padding:0px;
         text-transform: uppercase;
-        color:#999999;
+        color:#777;
         font-size: 16px;
 
     }
@@ -203,7 +203,7 @@ body {
             padding:0px;
             font-family: "Roboto Condensed";
             font-weight: 300;
-            color:#999999;
+            color:#777;
             font-size: 16px;
         }
             #header #secondary-menu .nav .menu-item:hover {border-color:#000;}
@@ -384,7 +384,7 @@ body {
             font-family: "Roboto Condensed";
             font-weight: 300;
             font-size: 17px;
-            color:#999;
+            color:#777;
         }
         .single .meta .share {
             text-align: right;
@@ -984,7 +984,7 @@ body {
     }
 /* Footer */
 #footer {
-    color:#999999;
+    color:#777;
     font-size: 13px;
     font-family: "Roboto Condensed";
 }
@@ -994,7 +994,7 @@ body {
         border-top:1px solid #E5E5E5;
     }
     #footer a {
-        color:#999999;
+        color:#777;
     }
     #footer #secondary-menu .menu-item {
         width: 33%;
