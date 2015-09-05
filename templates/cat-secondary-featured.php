@@ -7,7 +7,9 @@
 										),
 										'meta_key' => '_ungrynerd_cat_featured2', 
 										'meta_value' => 1, 
-										'posts_per_page' => 1)); ?>
+										'posts_per_page' => 1,
+										'post__not_in' => $posts_excluded
+										)); ?>
 <?php if ($featured->have_posts()) : ?>
 	<div class="secondary-cat-featured">
 		<div class="clearfix">
