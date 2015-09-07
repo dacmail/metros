@@ -68,6 +68,7 @@ body {
     position: relative;
     font-weight: 700;
     margin-bottom:35px;
+    margin-top:0px;
 }
     .block-title a {
         color:inherit;
@@ -950,6 +951,8 @@ body {
     }
     .big-featured .image-wrap .container {
         position: relative;
+        padding-left: 0px;
+        padding-right: 0px;
     }
     .big-featured .image-wrap.video {
         background-color: #000;
