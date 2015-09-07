@@ -609,7 +609,22 @@ body {
             margin-bottom: 20px;
             margin-top:0px;
         }
-    #atftbx {margin-left: -30px;}
+    #atftbx {
+        margin-left: -30px;
+        text-align: center;
+        height: 32px;
+    }
+        #atftbx p {
+            margin-right: 10px;
+            display: inline-block;
+            line-height: 37px;
+            top: -10px;
+            position: relative;
+        }
+        #atftbx .addthis_toolbox {
+            display: inline-block;
+            float: none;
+        }
     /* Busqueda */
     #searchform .wrapper {
         background: #fff;
