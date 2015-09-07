@@ -79,6 +79,10 @@
 								)); ?>
 							<div class="block-wrap">
 								<?php include(locate_template('templates/secondary-block.php')); ?>
+								<?php if ($term->term_id==762): ?>
+									<p class="more"><a href="http://metroscopia.org/tema/encuestas/">Ver más </a></p>
+								<?php endif ?>
+
 							</div>
 						</div>
 					</div>
