@@ -8,6 +8,8 @@
 				<?php the_title(); ?>
 			</a>
 		</h2>
-		<p class="author-meta"><?php the_author_posts_link(); ?></p>
+		<?php if($post->post_type == 'post') :?>
+			<p class="author-meta"><?php the_author_posts_link(); ?></p>
+		<?php endif ?>
 	</article>
 <?php endwhile; ?>

@@ -40,6 +40,15 @@
 		);
 	}
 
+	//Excluir páginas de búsqueda
+	function SearchFilter($query) {
+		if ($query->is_search) {
+			$query->set('post_type', 'post');
+		}
+		return $query;
+	}
+	add_filter('pre_get_posts','SearchFilter');
+
 	// Soporte para miniaturas y definición de tamaños
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'slideshow', 900, 560, false );
