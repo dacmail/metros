@@ -57,7 +57,7 @@
 										'terms'    => array($term->term_id),
 									)
 								),
-								'posts_per_page' => 3,
+								'posts_per_page' => 6,
 								'post__not_in' => $posts_excluded
 								)); ?>
 							<div class="block-wrap">
@@ -74,7 +74,7 @@
 										'terms'    => array($term->term_id),
 									)
 								),
-								'posts_per_page' => 5,
+								'posts_per_page' => 9,
 								'post__not_in' => $posts_excluded
 								)); ?>
 							<div class="block-wrap">

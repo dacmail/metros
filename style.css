@@ -603,12 +603,13 @@ body {
     padding-left: 60px;
 }
     #sidebar .widget {
-        margin-bottom:40px;
+        margin-bottom:30px;
     }
         #sidebar .block-title {
             margin-bottom: 20px;
+            margin-top:0px;
         }
-
+    #atftbx {margin-left: -30px;}
     /* Busqueda */
     #searchform .wrapper {
         background: #fff;
@@ -1322,6 +1323,7 @@ a img.aligncenter {
     }
 }
 @media only screen and  (max-width : 768px) {
+    #atftbx {margin-left: 0px;}
     #header {
         padding-bottom: 10px;
     }
@@ -1361,6 +1363,13 @@ a img.aligncenter {
         .big-featured.home .post-title a {
             color:#191919;
         }
+        .big-featured.home .author-meta {
+            position: relative;
+            top: -5px;
+            left: 0px;
+        }
+            .big-featured.home .author-meta a {color:#000;}
+            .big-featured.home .author-meta a:before {background-color: #000;}
         .big-featured .image-wrap.video .play {
             background-size: 16% auto;
             background-position: center 50px;

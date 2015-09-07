@@ -9,7 +9,7 @@
 					<?php wp_nav_menu(array('container' => 'nav', 'container_id' => 'secondary-menu', 'menu_class' => 'nav navbar-nav', 'theme_location' => 'secondary-foot')); ?>
 				</div>
 				<div class="col-sm-12 copy">
-					Copyright &copy; 2011 Metroscopia. C/ General Yagüe, 6 bis. 28020 Madrid. Tel: 91 701 55 99. Fax: 91 521 06 09 / <a href="#">Política de Privacidad</a> - <a href="http://ungrynerd.com" target="_blank">UNGRYNERD</a> &amp; <a href="http://wordpress.org" target="_blank">WordPress</a>
+					Copyright &copy; 2011 Metroscopia. C/ General Yagüe, 6 bis. 28020 Madrid. Tel: 91 701 55 99. Fax: 91 521 06 09 / <a href="<?php echo get_permalink(2927); ?>">Política de Privacidad</a> - <a href="http://ungrynerd.com" target="_blank">UNGRYNERD</a> &amp; <a href="http://wordpress.org" target="_blank">WordPress</a>
 				</div>
 			</div>
 		</div>
