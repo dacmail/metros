@@ -1376,7 +1376,7 @@ a img.aligncenter {
             font-size: 30px;
             position: relative;
             top: 0px;
-            left: 0px;
+            left: 15px;
         }
         .big-featured.home .post-title a {
             color:#191919;
@@ -1384,7 +1384,7 @@ a img.aligncenter {
         .big-featured.home .author-meta {
             position: relative;
             top: -5px;
-            left: 0px;
+            left: 15px;
         }
             .big-featured.home .author-meta a {color:#000;}
             .big-featured.home .author-meta a:before {background-color: #000;}
