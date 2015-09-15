@@ -777,16 +777,21 @@ body {
 /* SECCIÓN */
 .slideshow-wrap {
     margin-bottom: 40px;
-
+    max-height: 536px;
 } 
     .slideshow-wrap .col-sm-9 {
         padding-right: 0px;
+        max-height: 536px;
+        overflow: hidden;
     }
     .slideshow-wrap .col-sm-3 {
         padding-left: 0px;
     }
     .slideshow-wrap .slidesow {
         position: relative;
+    }
+    .slideshow-wrap .owl-item {
+        max-height: 536px;
     }
     .slideshow-wrap .image {
         border:1px solid #E5E5E5;
