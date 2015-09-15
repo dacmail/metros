@@ -48,6 +48,7 @@ body {
     #content p {
         margin:20px 0px;
     }
+
     #content .post-content ul, #content .post-content ol {
         margin:10px;
     }
@@ -1110,6 +1111,7 @@ a img.aligncenter {
     max-width: 96%; /* Image does not overflow the content area */
     padding: 5px 3px 10px;
     text-align: center;
+    width: auto !important;
 }
 
 .wp-caption.alignnone {
@@ -1138,6 +1140,9 @@ a img.aligncenter {
     line-height: 17px;
     margin: 0;
     padding: 0 4px 5px;
+}
+#content p.wp-caption-text {
+    margin:10px 0px 0px;
 }
 .bypostauthor {}
 .gallery-caption {}
