@@ -278,7 +278,7 @@ body {
 #main-home-content {margin-bottom: 40px;}
 /* Primary featured */
 .big-featured.home {
-    margin-top:-40px;
+    margin-top:0px;
 }
     .big-featured.home .title-wrap {
         height: 262px;
@@ -955,7 +955,7 @@ body {
         width: 100%;
         height: auto;
     }
-    .big-featured .image-wrap .container {
+    .big-featured .image-wrap .container .wrapper {
         position: relative;
         padding-left: 0px;
         padding-right: 0px;
@@ -1226,14 +1226,14 @@ a img.aligncenter {
 .single-recurso .recurso.category-sociedad .image img {border-bottom: 5px solid #9C7FC6;}
 .single-recurso .recurso.category-sostenibilidad .image img {border-bottom: 5px solid #99C45B;}
 
-.big-featured .image-wrap.category-desigualdad {border-bottom: 5px solid #C17759;}
-.big-featured .image-wrap.category-economia {border-bottom: 5px solid #5CB796;}
-.big-featured .image-wrap.category-elecciones {border-bottom: 5px solid #F44A1C;}
-.big-featured .image-wrap.category-internacional {border-bottom: 5px solid #3A88CE;}
-.big-featured .image-wrap.category-nacionalismo {border-bottom: 5px solid #E0BC4B;}
-.big-featured .image-wrap.category-politica {border-bottom: 5px solid #E58925;}
-.big-featured .image-wrap.category-sociedad {border-bottom: 5px solid #9C7FC6;}
-.big-featured .image-wrap.category-sostenibilidad {border-bottom: 5px solid #99C45B;}
+.big-featured .image-wrap.category-desigualdad .wrapper {border-bottom: 5px solid #C17759;}
+.big-featured .image-wrap.category-economia .wrapper {border-bottom: 5px solid #5CB796;}
+.big-featured .image-wrap.category-elecciones .wrapper {border-bottom: 5px solid #F44A1C;}
+.big-featured .image-wrap.category-internacional .wrapper {border-bottom: 5px solid #3A88CE;}
+.big-featured .image-wrap.category-nacionalismo .wrapper {border-bottom: 5px solid #E0BC4B;}
+.big-featured .image-wrap.category-politica .wrapper {border-bottom: 5px solid #E58925;}
+.big-featured .image-wrap.category-sociedad .wrapper {border-bottom: 5px solid #9C7FC6;}
+.big-featured .image-wrap.category-sostenibilidad .wrapper {border-bottom: 5px solid #99C45B;}
 
 #sidebar .analista.category-desigualdad .post-title:before {background: #C17759;}
 #sidebar .analista.category-economia .post-title:before {background: #5CB796;}
