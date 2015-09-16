@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png" />
 	<?php wp_head(); ?>
+	<meta name="description" content="Encuestas, encuestas electorales, sondeos de opinión, España, Pulso de España, PP, PSOE, Ciudadanos, Podemos, Izquierda Unida, CIU, PNV, ERC, UPyD, Bildu, Convergencia, Cataluña, País Vasco, Madrid, Barcelona, nacionalismo, clima social, elecciones, análisis, gráficos, política, economía, líderes." />
 </head>
 <body <?php body_class(); ?>>
 	<header id="header">

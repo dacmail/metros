@@ -1291,8 +1291,16 @@ a img.aligncenter {
 
 
 
-@media only screen and  (max-width : 1200px) {}
+@media only screen and  (max-width : 1200px) {
+    .category-metas .cat {
+        position: relative;
+        top:-1px;
+    }
+}
 @media only screen and  (max-width : 991px) {
+    #sidebar .analista .post-title {
+        margin-left: 25px;
+    }
     #container {padding:10px 0px;}
     .big-featured.home {margin-top:-10px;}
     #header #main-menu .menu-item {
@@ -1351,7 +1359,13 @@ a img.aligncenter {
     }
 }
 @media only screen and  (max-width : 768px) {
-    #atftbx {margin-left: 0px;}
+    .dato .text {
+        font-size: 15px;
+    }
+    #atftbx {
+        margin-left: 0px;
+        height: auto;
+    }
     #header {
         padding-bottom: 10px;
     }
