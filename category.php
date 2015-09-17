@@ -11,7 +11,9 @@
 										)
 									),
 									'meta_key' => '_ungrynerd_cat_featured', 
-									'meta_value' => 1, 
+									'meta_value' => 1,
+									'meta_key' => '_ungrynerd_cat_featured_cat', 
+									'meta_value' => $term->term_id,
 									'posts_per_page' => 3)); ?>
 				<?php if ($featured->have_posts() && $featured->post_count==3): ?>
 					<div class="col-sm-12">

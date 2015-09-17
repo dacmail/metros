@@ -49,11 +49,31 @@ $meta_boxes[] = array(
 	                'type' => 'checkbox',
 	            ),
             array(
+				'name'    => __( 'Sección', 'ungrynerd' ),
+				'id'      => $prefix . 'cat_featured_cat',
+				'type'    => 'taxonomy_advanced',
+				'options' => array(
+					'taxonomy' => 'category',
+					'taxonomies' => array('category','tipo'),
+					'type'     => 'select_advanced',
+				),
+			),
+            array(
 	                'name' =>  __('Destacar en portada de sección (secundario)'),
 	                'desc' =>  __('¿Mostrar en el bloque destacado secundario?'),
 	                'id' => $prefix . 'cat_featured2',
 	                'type' => 'checkbox',
-	            )
+	            ),
+            array(
+				'name'    => __( 'Sección', 'ungrynerd' ),
+				'id'      => $prefix . 'cat_featured2_cat',
+				'type'    => 'taxonomy_advanced',
+				'options' => array(
+					'taxonomy' => 'category',
+					'taxonomies' => array('category','tipo'),
+					'type'     => 'select_advanced',
+				),
+			),
         ),
     );
 
