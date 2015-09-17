@@ -6,7 +6,9 @@
 											)
 										),
 										'meta_key' => '_ungrynerd_cat_featured2', 
-										'meta_value' => 1, 
+										'meta_value' => 1,
+										'meta_key' => '_ungrynerd_cat_featured2_cat', 
+										'meta_value' => $term->term_id, 
 										'posts_per_page' => 1,
 										'post__not_in' => $posts_excluded
 										)); ?>
