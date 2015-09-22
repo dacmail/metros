@@ -630,6 +630,39 @@ body {
             display: inline-block;
             float: none;
         }
+    /* Newsletter form */
+    #mc-embedded-subscribe-form {
+        margin-left: -30px;
+    }
+    #mc-embedded-subscribe-form p {
+        font-size: 12px;
+    }
+    #mc-embedded-subscribe-form .email {
+        width: 100%;
+        background: transparent;
+        border: 1px solid #E5E5E5;
+        line-height: 40px;
+        height: 40px;
+        padding: 0px 8px;
+        color: #191919;
+        font-family: "Roboto Condensed";
+        margin-bottom: 5px;
+    }
+    #mc-embedded-subscribe-form .button {
+        border:0px;
+        border-radius: 0px;
+        text-transform: uppercase;
+        font-family: "Roboto Condensed";
+        padding:5px 20px;
+        color: #fff;
+        background-color: #FF434A;
+        border-color: #FF434A;
+        width: 100%;
+    }
+    #mc-embedded-subscribe-form .button:hover {
+        background-color: #FF434A;
+        opacity: 0.8;
+    }
     /* Busqueda */
     #searchform .wrapper {
         background: #fff;
@@ -1437,6 +1470,9 @@ a img.aligncenter {
         margin-left: 0px;
     }
     #searchform .wrapper {
+        margin-left: 0px;
+    }
+    #mc-embedded-subscribe-form {
         margin-left: 0px;
     }
     #sidebar .dato {
