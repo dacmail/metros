@@ -1,4 +1,9 @@
 <?php
+	function ungrynerd_skip_ssl_verify($ssl_verify) {
+	    return false;
+	}
+	add_filter('https_ssl_verify', 'ungrynerd_skip_ssl_verify');
+	add_filter('https_local_ssl_verify', 'ungrynerd_skip_ssl_verify');
 
 	// Add category slug css class to menu items
 	function wpa_category_nav_class( $classes, $item ){
