@@ -3,7 +3,7 @@
 				'posts_per_page' => 3,
 				'post__not_in' => $posts_excluded
 				)); ?>
-<h2 class="block-title <?php echo $term->slug ?>">Lo último</h2>
+<h2 class="block-title <?php echo $term->slug ?>">Destacado</h2>
 <div class="row">
 <?php while ($block_posts->have_posts()) : $block_posts->the_post(); ?>
 	<?php $posts_excluded[] = get_the_ID();  ?>

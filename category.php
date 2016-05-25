@@ -1,3 +1,6 @@
+<?php if (is_paged()): ?>
+	<?php get_template_part('archive'); exit; ?>
+<?php endif ?>
 <?php get_header() ?>
 	<?php $term = get_queried_object(); ?>
 	<div id="container" class="clearfix">
@@ -82,6 +85,11 @@
 							<div class="block-wrap">
 								<?php include(locate_template('templates/secondary-block.php')); ?>
 							</div>
+						</div>
+					</div>
+					<div class="col-sm-9">
+						<div class="pagination-wrap">
+							<?php ungrynerd_pagination(); ?>
 						</div>
 					</div>
 				</div>
