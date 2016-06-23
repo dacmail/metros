@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Ungrynerd_List_Tags Class
  */
@@ -7,7 +7,7 @@ class Ungrynerd_List_Tags extends WP_Widget {
     function Ungrynerd_List_Tags() {
         parent::WP_Widget(false, '(Metroscopia) Listado etiquetas', array(
                                 'description' => 'Listado de etiquetas por orden de importancia'
-                                ));  
+                                ));
     }
     public function widget( $args, $instance ) {
         $current_taxonomy = $this->_get_current_taxonomy($instance);
@@ -92,13 +92,13 @@ class Ungrynerd_Analistas extends WP_Widget {
     function Ungrynerd_Analistas() {
         parent::WP_Widget(false, '(Metroscopia) Analistas', array(
                                 'description' => 'Muestra los ultimos analisis destacando al analista'
-                                ));  
+                                ));
     }
     public function widget( $args, $instance ) {
 
         if ( !empty($instance['title']) ) {
             $title = $instance['title'];
-        } 
+        }
 
         $limit = empty($instance['limit']) ? 3 : $instance['limit'];
 
@@ -127,7 +127,7 @@ class Ungrynerd_Analistas extends WP_Widget {
         <?php $authors = array(); ?>
         <?php while ($query->have_posts()) : $query->the_post(); ?>
             <?php if (!in_array($post->post_author, $authors)): ?>
-                <?php 
+                <?php
                     setup_postdata($post);
                     $posts_excluded[] = get_the_ID();
                     $authors[] = $post->post_author;
@@ -191,13 +191,13 @@ class Ungrynerd_El_Dato extends WP_Widget {
     function Ungrynerd_El_Dato() {
         parent::WP_Widget(false, '(Metroscopia) El dato', array(
                                 'description' => 'Muestra el último dato'
-                                ));  
+                                ));
     }
     public function widget( $args, $instance ) {
 
         if ( !empty($instance['title']) ) {
             $title = $instance['title'];
-        } 
+        }
 
 
         $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
