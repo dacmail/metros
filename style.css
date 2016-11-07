@@ -210,7 +210,7 @@ body {
         }
             #header #secondary-menu .nav .menu-item:hover {border-color:#000;}
             #header #secondary-menu .nav .menu-item a:hover {
-                color:#000; 
+                color:#000;
                 background-color: transparent;
             }
 /* Articles commons */
@@ -457,14 +457,14 @@ body {
                 font-weight: 300;
                 line-height: 32px;
                 text-transform: uppercase;
-            }   
+            }
                 .single .post-content .sidebar .category-metas .type .fa {
                     margin-right: 10px;
                     position: absolute;
                     top:0px;
                     left: 10px;
                 }
-        
+
         .single .post-content .article {
             font-size: 19px;
             font-family: "Enriqueta", "Georgia", serif;
@@ -472,6 +472,7 @@ body {
             color:#333;
             border-bottom: 1px solid #E5E5E5;
             margin-bottom: 10px;
+            word-break:break-all;
         }
             .single #content .post-content .article p:first-child {margin-top:0px;}
             .post-content .article .tags {
@@ -563,7 +564,7 @@ body {
 }
     #comments .comment {
         position: relative;
-        
+
         list-style: none;
     }
         #comments .comment .children {
@@ -693,16 +694,16 @@ body {
             color:#191919;
             font-family: "Roboto Condensed";
         }
-        #searchform .wrapper .field::-webkit-input-placeholder { 
+        #searchform .wrapper .field::-webkit-input-placeholder {
             color: #b2b2b2;
         }
-        #searchform .wrapper .field:-moz-placeholder { 
+        #searchform .wrapper .field:-moz-placeholder {
             color: #b2b2b2;
         }
-        #searchform .wrapper .field::-moz-placeholder { 
+        #searchform .wrapper .field::-moz-placeholder {
             color: #b2b2b2;
         }
-        #searchform .wrapper .field:-ms-input-placeholder { 
+        #searchform .wrapper .field:-ms-input-placeholder {
             color: #b2b2b2;
         }
     /* Tendencias */
@@ -815,7 +816,7 @@ body {
 .slideshow-wrap {
     margin-bottom: 40px;
     max-height: 536px;
-} 
+}
     .slideshow-wrap .col-sm-9 {
         padding-right: 0px;
         max-height: 536px;
@@ -928,7 +929,7 @@ body {
             display: table;
             height: 100%;
             margin: 0px;
-            
+
         }
         .secondary-cat-featured .post-title a {
             color:#fff;
@@ -1385,7 +1386,7 @@ a img.aligncenter {
     }
     .primary-home .image {
         width: 85px;
-        height: 85px; 
+        height: 85px;
     }
     .single .post-title {
         font-size: 45px;
